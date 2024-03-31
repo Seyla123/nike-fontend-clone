@@ -1,0 +1,79 @@
+body {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: "Helvetica Now Text", Helvetica, Arial, sans-serif;
+    color: var(--podium-cds-color-black);
+    background-color: var(--podium-cds-color-white);
+}
+.pre-srcim {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+#header-container {
+    display: flex;
+    flex-direction: column;
+    height: 10%;
+    background: orange;
+}
+#body-container{
+    flex: 1;
+    min-height: 70%;
+    background-color: beige;
+}
+#footer-container{
+    flex: 1;
+    min-height: 20%;
+    background-color: black;
+}
+
+.brand-header {
+    min-height: 50%;
+    background-color: #f5f5f5;
+}
+.header {
+    display: flex;
+    min-height: 50%;
+    background-color: #f5f5f5;
+}
+.pre-l-header {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    min-height: 100%;
+    margin-left: 36px;
+    margin-right: 36px;
+    ;
+}
+.icon-header{
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+    min-height: 100%;
+}
+.menu-header {
+    display: flex;
+    align-items: center;
+    ;
+}
+.menu-header ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu-header ul li {
+    padding: 2px;
+    margin: 0px 8px 0px 8px;
+}
+
+.icon-header ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.icon-header ul li {
+    padding: 12px;
+}
