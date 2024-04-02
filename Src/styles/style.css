@@ -9,7 +9,6 @@ body {
 }
 .pre-srcim {
   display: flex;
-  height: 100vh;
   flex-direction: column;
   overflow: auto;
 }
@@ -21,7 +20,7 @@ body {
 }
 #body-container {
   flex: 1;
-  background-color: beige;
+  
   
 }
 #footer-container {
@@ -223,17 +222,6 @@ body {
   background-color: #eeeeee;
 }
 
-/* Discount Feature */
-/* .discount-feature{
-    display: flex;
-    font-size: 18px;
-    align-items: center;
-    justify-content: center;
-    height: 24px;
-}
-.discount-feature:hover{
-    background-color: #eeeeee;
-} */
 .min-navbar ul {
   display: none;
 }
@@ -244,7 +232,7 @@ body {
 .min-navbar ul li:hover {
   opacity: 0.5;
 }
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1165px) {
   .Accessories-menu {
     display: none;
   }
@@ -307,17 +295,31 @@ body {
         display: none;
     }
     .pic-hero-section{
-        margin: 20px;
+        margin:10px 20px 10px 20px;
     }
 }
+/* Discount Feature */
+.discount-feature{
+  display: flex;
+  font-size: 18px;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  background-color: #eeeeee;
+  margin-bottom: 20px;
+}
+.discount-feature p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
 .section-hero{
-    background-color: aqua;
     display: flex;
-    min-height: 60vh;
     flex-direction: column;
+    text-decoration: none;
+    color: black;
 }
 .pic-hero-section{
-    background-color: antiquewhite;
+    margin-bottom: 30px;
 }
 .max-pic-hero{
     width: 100%;
@@ -329,8 +331,6 @@ body {
     
 }
 .action-hero-section{
-   
-    background-color: gray;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -339,7 +339,6 @@ body {
 }
 .action-section{
     display: flex;
-    background-color: gold;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -352,36 +351,125 @@ body {
     margin: 0;
     padding: 0;
     margin-top: -40px;
+    margin-bottom: -10px;
+}
+.action-section p{
+  text-align: center;
 }
 .action-section p[draggable="true"]{
-    background-color: bisque;
     padding: 0;
+    margin-top: 0;
     font-size: 16px;
 }
-/* .text-header p{
-    font-family: "Mukta", sans-serif;
-    font-size: 76px;
-    font-weight: bold;
-    
-    margin: 0;
-    padding: 0;
+.action-section .button{
+  min-height: 36px;
+  min-width: 70px;
+  background-color: black;
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
-.text-above-header p{
-    margin-bottom: -40px;
-    padding: 0;
-    font-size: 16px;
-} */
-
-
-
+.action-section .button:hover{
+  opacity: 0.5;
+}
 .section-trending{
-    background-color: #bebbbb;
-    min-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
 }
 .section-featured{
-    
-    background-color: #e7e7e7;
-    min-height: 35vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
 }
-
  /*cmd-hero-section*/
+
+ /* cmd-trending-section */
+ .trending-title{
+  display: block;
+  justify-content: space-center;
+  width: 90%;;
+ }
+ .trending-title h3{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 24px;
+ }
+ .feature-trending{
+  width: 90%;
+ }
+ .feature-trending ul{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 0.3rem;
+ }
+ .feature-trending ul li{
+  list-style: none;
+ }
+ .card-feature-trending p{
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif; 
+  position: relative;   
+ }
+
+ /* cmd-featured-section */
+ .title-featured{
+  position: absolute;
+  margin-top: -180px;
+  margin-left: 30px;
+  text-align: start;
+  color: white;
+ }
+ .title-featured a{
+  text-decoration: none;
+  
+ }
+ .title-featured p{
+  font-size: 16px;
+  margin: 0;
+  margin-bottom: 10px;
+  color: white;
+ }
+ .title-featured h3{
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 30px;
+  color: white;
+ }
+ .button-featured{
+  position: absolute;
+  min-height: 36px;
+  min-width: 70px;
+  background-color: white;
+  color: black;
+  border-radius: 30px;
+  border: none;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.button-featured:hover{
+  opacity: 0.9;
+}
+/* cmd-clasiic-section */
+.carousel-classices{
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
