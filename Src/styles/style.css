@@ -469,7 +469,29 @@ body {
 .carousel-classices{
   background-color: aqua;
   display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.classic-title{
+  width: 100%;
+  display: flex;
+  margin-top: 60px;
+  flex-direction: column;
+  align-items: center;
+  background-color: antiquewhite;
+}
+.classic-title div{
+  background-color: aqua;
+  width: 90%;
+}
+.classic-title h3{
+  color: white;
+}
+
+/* .carousel-classices{
+  background-color: aqua;
+  display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 60px;
-}
+} */
