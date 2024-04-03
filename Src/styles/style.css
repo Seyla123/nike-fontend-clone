@@ -342,6 +342,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100%;
     
 }
 .action-section h3{
