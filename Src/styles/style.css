@@ -1,3 +1,6 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 body {
   font-size: inherit;
   line-height: inherit;
@@ -7,20 +10,34 @@ body {
   margin: 0;
   padding: 0;
 }
+.container-body{
+  max-width: 1800px;
+  margin: 0 auto;
+}
+.container-header-1{
+  display: flex;
+  flex-direction: column;
+  height: 7.5%;
+  background-color: #ffffffb3;
+ 
+  margin: 0 auto;
+}
 .pre-srcim {
   display: flex;
   flex-direction: column;
   overflow: auto;
+  
 }
 #header-container {
   display: flex;
   flex-direction: column;
   height: 7.5%;
-  background: #eeeeee;
+  background-color: #f5f5f5;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 #body-container {
   flex: 1;
-  
   
 }
 #footer-container {
@@ -30,13 +47,15 @@ body {
 /* cmd-navbar */
 .brand-header {
   min-height: 35px;
-  background-color: #f5f5f5;
+  background-color: yellow;
   display: flex;
   justify-content: center;
+  max-width: 1800px;
+  margin: 0 auto;
 }
 .header {
   display: flex;
-  min-height: 50%;
+  
   background-color: #ffffffb3;
 }
 .pre-l-header {
@@ -44,7 +63,7 @@ body {
   gap: 2rem;
   justify-content: space-between;
   height: 36px;
-  width: 90%;
+  width: 100%;
 }
 .icon-header {
   display: flex;
@@ -307,6 +326,7 @@ body {
   height: 24px;
   background-color: #eeeeee;
   margin-bottom: 20px;
+  
 }
 .discount-feature p{
   font-family: Arial, Helvetica, sans-serif;
@@ -501,4 +521,7 @@ body {
   align-items: center;
   margin-top: 60px;
 } */
+
+
+/* Card Nike Shoe */
 
