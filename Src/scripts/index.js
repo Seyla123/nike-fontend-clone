@@ -13,7 +13,36 @@ const nav = document.querySelector('.navbar-layout')
 fetch('../components/layouts/navbar.html')
 .then(res=>res.text())
 .then(data=>{
-    nav.innerHTML=data
+    nav.innerHTML=data;
+    // dropdown-1
+    var btn2 = document.querySelectorAll(".new-featured-menu");
+    var dropdowm_1 = document.getElementById("dropdown-1");
+    // function addBlur() {
+    //     document.getElementById('section').classList.add('blurred');
+    //   }
+    //   function removeBlur() {
+    //     document.getElementById('section').classList.add('blurred');
+    //   }
+    for (var i = 0;i<btn2.length;i++){
+        if (btn2[i]) {
+            btn2[i].addEventListener("mouseover", function() {
+              dropdowm_1.style.visibility="visible";
+              addBlur();
+            });
+            dropdowm_1.addEventListener("mouseover", function() {
+                dropdowm_1.style.visibility="visible";
+                addBlur()
+              });
+            dropdowm_1.addEventListener("mouseout", function() {
+                dropdowm_1.style.visibility="hidden";
+                removeBlur();
+              });
+          } else {
+            console.error("Button with ID 'btn2' not found.");
+          }
+    }
+    
+    ///////////////////////////
 })
 .catch(error => console.error('Error fetching included file:', error));
 //Hero Section 
@@ -104,3 +133,4 @@ fetch('../components/layouts/footer.html')
     footer.innerHTML=data
 })
 .catch(error => console.error('Error fetching included file:', error));
+
