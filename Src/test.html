@@ -19,16 +19,22 @@
 </style>
 </head>
 <body>
-<button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 py-2 bg-gray-800 text-white rounded-md z-10" onclick="removeBlur()">Button 1</button>
-<button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 px-4 py-2 bg-orange-500 text-white rounded-md z-10" onclick="removeBlur()">Button 2</button>
-<div id="content" class="container bg-blue-200 min-h-screen flex justify-center items-center blurred">
-  <p>This is some content. Click any button to remove the blur effect.</p>
-</div>
+  <p>Resize the browser window to fire the <code>resize</code> event.</p>
+  <p>Window height: <span id="height"></span></p>
+  <p>Window width: <span id="width"></span></p>
+  
 
 <script>
-  function removeBlur() {
-    document.getElementById('content').classList.remove('blurred');
-  }
+const heightOutput = document.querySelector("#height");
+const widthOutput = document.querySelector("#width");
+
+function reportWindowSize() {
+  heightOutput.textContent = window.innerHeight;
+  widthOutput.textContent = window.innerWidth;
+}
+
+window.onresize = reportWindowSize;
+
 </script>
 </body>
 </html>
