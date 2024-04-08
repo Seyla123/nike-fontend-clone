@@ -315,7 +315,7 @@ body {
  /*cmd-navbar*/
  /*cmd-hero-section*/
  /*cmd-body */
-@media screen and (min-width: 600px){
+/* @media screen and (min-width: 600px){
     .min-pic-hero{
         display: none;
     }
@@ -327,7 +327,7 @@ body {
     .pic-hero-section{
         margin:10px 20px 10px 20px;
     }
-}
+} */
 /* Discount Feature */
 .discount-feature{
   display: flex;
