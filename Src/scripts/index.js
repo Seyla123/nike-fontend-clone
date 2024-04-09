@@ -18,7 +18,14 @@ function back_ (element,btn){
 // function block
 
 
-
+//test
+fetch("../components/layouts/test.html")
+  .then((res)=> res.text())
+  .then((data) => {
+    document.querySelector(".test-layout").innerHTML = data;
+    document.dispatchEvent(new Event('TestComponentLoaded'));
+})
+.catch((error) => console.error("Erro Fetching included file:", error));
 
 
 // Header
@@ -27,6 +34,7 @@ fetch("../components/layouts/header.html")
   .then((res) => res.text())
   .then((data) => {
     header.innerHTML = data;
+    
   })
   .catch((error) => console.error("Error fetching included file:", error));
 ////////
@@ -44,15 +52,15 @@ fetch("../components/layouts/navbar.html")
     for (var i = 0; i < btn2.length; i++) {
       if (btn2[i]) {
         btn2[i].addEventListener("mouseover", function () {
-          dropdowm_1.style.visibility = "visible";
+          dropdowm_1.style.display = "flex";
           addBlur();
         });
         dropdowm_1.addEventListener("mouseover", function () {
-          dropdowm_1.style.visibility = "visible";
+          dropdowm_1.style.display = "flex";
           addBlur();
         });
         dropdowm_1.addEventListener("mouseout", function () {
-          dropdowm_1.style.visibility = "hidden";
+          dropdowm_1.style.display = "none";
           removeBlur();
         });
       } else {
@@ -72,7 +80,7 @@ fetch("../components/layouts/navbar.html")
         sidebar_section.style.display = "block";
       });
 
-    
+      document.dispatchEvent(new Event('headerComponentLoaded'));
   })
   .catch((error) => console.error("Error fetching included file:", error));
 //Hero Section

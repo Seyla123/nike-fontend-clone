@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+
+<h2>Set HTML</h2>
+<div id="01" class="text-red-600"><p>Hello World!</p></div>
+<div id="02"><p>Hello Sweden!</p></div>
+
+<p id="demo" class="hidden">invisible</p>
+<div class="test-layout"></div>
+<script>
+$(document).ready(function() {
+  $("#02").html("<p class='text-red-500'>Hello World!</p>");
+});
+</script>
+<div class="navbar-layout"></div>
+<script src="../scripts/index.js"></script>
+<script>
+// Function to handle clicks on the header button
+// function handleHeaderInteractions2() {
+//   const btn_click = document.querySelector("#btn-click-test");
+//   if (btn_click) {
+//     btn_click.addEventListener("mouseover", function () {
+//       //document.querySelector('#demo').style.display='flex';
+//       alert('Yes, element inside the header component is accessible!');
+      
+//     });
+//   } else {
+//     alert('No element found inside the header component!');
+//   }
+// }
+function handleHeaderInteractions() {
+  const cartBtn = document.querySelector("#max-cart-btn");
+  if (cartBtn) {
+    cartBtn.addEventListener("mouseover", function () {
+      document.querySelector('#btn-click-test').style.display='none';
+      alert('Yes, element inside the header component is accessible!');
+      
+    });
+  } else {
+    alert('No element found inside the header component!');
+  }
+}
+
+// Event delegation to handle interactions with elements inside the header component
+document.addEventListener('headerComponentLoaded', handleHeaderInteractions);
+</script>
+</body>
+</html>
