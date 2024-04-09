@@ -1,3 +1,21 @@
+// function btn back and next
+function next_ (element,btn){
+  btn.addEventListener("click",function(){
+    element.scrollBy({
+      left: 300,
+      behavior: "smooth",
+    });
+  });
+}
+function back_ (element,btn){
+  btn.addEventListener("click",function(){
+    element.scrollBy({
+      left: -300,
+      behavior: "smooth",
+    });
+  });
+}
+// function block
 // Promotion 
 const promotion = document.querySelector(".promotion-layout");
 fetch("../components/layouts/men/promotion.html")
@@ -22,6 +40,15 @@ fetch("../components/layouts/men/men-hero-section.html")
     men_hero_section.innerHTML = data;
   })
   .catch((error) => console.error("Error fetching included file:", error));
+
+ // big-hero-section 
+const bigHeroSection = document.querySelector(".big-hero-section-layout");
+fetch("../components/layouts/men/big-hero-section.html")
+  .then((res) => res.text())
+  .then((data) => {
+    bigHeroSection.innerHTML = data;
+  })
+  .catch((error) => console.error("Error fetching included file:", error));
   // shop-section 
 const shop_section = document.querySelector(".shop-section-layout");
 fetch("../components/layouts/men/shop-section.html")
@@ -36,6 +63,13 @@ fetch("../components/layouts/men/classic-section.html")
   .then((res) => res.text())
   .then((data) => {
     classic_section.innerHTML = data;
+    const classic_back_btn = document.querySelector("#classic-back-btn");
+    const classic_next_btn = document.querySelector("#classic-next-btn");
+    const classic_container = document.querySelector("#classic-scroll-container");
+
+    // call function back_ and next_ ,for btn back and next
+    back_(classic_container,classic_back_btn);
+    next_(classic_container,classic_next_btn);
   })
   .catch((error) => console.error("Error fetching included file:", error));
     // shop-section 
