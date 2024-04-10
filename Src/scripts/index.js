@@ -46,27 +46,45 @@ fetch("../components/layouts/navbar.html")
   .then((data) => {
     nav.innerHTML = data;
     // dropdown-1
-    var btn2 = document.querySelectorAll(".new-featured-menu");
+    var btn2 = document.querySelector(".new-featured-menu");
     var dropdowm_1 = document.getElementById("dropdown-1");
+    let below_dropdown_1 = document.getElementById("below-dropdown-1");
+    let navbar = document.getElementById("navbar");
+    btn2.addEventListener("mouseover", function () {
+      dropdowm_1.classList.add('h-[400px]');
+      below_dropdown_1.classList.add('opacity-100');
+    });
+    dropdowm_1.addEventListener("mouseover", function () {
+      dropdowm_1.classList.add('h-[400px]');
+      below_dropdown_1.classList.add('opacity-100');
+    });
+    btn2.addEventListener("mouseout", function () {
+      dropdowm_1.classList.remove('h-[400px]');
+      below_dropdown_1.classList.remove('opacity-100');
+    });
+    dropdowm_1.addEventListener("mouseout", function () {
+      dropdowm_1.classList.remove('h-[400px]');
+      below_dropdown_1.classList.remove('opacity-100');
+    });
 
-    for (var i = 0; i < btn2.length; i++) {
-      if (btn2[i]) {
-        btn2[i].addEventListener("mouseover", function () {
-          dropdowm_1.style.display = "flex";
-          addBlur();
-        });
-        dropdowm_1.addEventListener("mouseover", function () {
-          dropdowm_1.style.display = "flex";
-          addBlur();
-        });
-        dropdowm_1.addEventListener("mouseout", function () {
-          dropdowm_1.style.display = "none";
-          removeBlur();
-        });
-      } else {
-        console.error("Button with ID 'btn2' not found.");
-      }
-    }
+    // for (var i = 0; i < btn2.length; i++) {
+    //   if (btn2[i]) {
+    //     btn2[i].addEventListener("mouseover", function () {
+    //       dropdowm_1.style.display = "flex";
+    //       addBlur();
+    //     });
+    //     dropdowm_1.addEventListener("mouseover", function () {
+    //       dropdowm_1.style.display = "flex";
+    //       addBlur();
+    //     });
+    //     dropdowm_1.addEventListener("mouseout", function () {
+    //       dropdowm_1.style.display = "none";
+    //       removeBlur();
+    //     });
+    //   } else {
+    //     console.error("Button with ID 'btn2' not found.");
+    //   }
+    // }
 
     ///////////////////////////
     //sidebar
@@ -77,7 +95,7 @@ fetch("../components/layouts/navbar.html")
 
     min_menu_btn.addEventListener("click", function () {
         all_except_sidebar.style.position = "fixed";
-        sidebar_section.style.display = "block";
+        sidebar_section.style.right = "0%";
       });
 
       document.dispatchEvent(new Event('headerComponentLoaded'));
