@@ -2,4 +2,4 @@ logs
 *.log
 
 DS_store
-node_modules_1
+node_modules
