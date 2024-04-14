@@ -220,7 +220,7 @@ fetch("../components/layouts/menu-section.html")
 
     for (var i=0;i<menu_below_btn.length;i++){
       menu_below_btn[i].addEventListener('mouseover',function(){
-        menu_below_hover.style.height = 'auto';
+        menu_below_hover.style.height = '500px';
       });
       menu_below_btn[i].addEventListener('mouseout',function(){
         menu_below_hover.style.height = '14.5vh';
