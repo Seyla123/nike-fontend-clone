@@ -14,17 +14,20 @@
         <a  id="" class="new-featured-menu px-2 py-4  hover:opacity-50" href=""
           ><li class="new-featured-menu">New & Featured</li></
         >
-        <a  class="new-featured-menu px-2 py-4  hover:opacity-50" href=""
-          ><li class="Men-menu">Men</li></a
+        <a id="men-menu-btn"  class="new-featured-menu px-2 py-4  hover:opacity-50" href=""
+          ><li class="men-men-btn">Men</li></a
         >
-        <a  class="new-featured-menu px-2 py-4  hover:opacity-50" href=""
+        <a id="women-menu-btn" class="new-featured-menu px-2 py-4  hover:opacity-50" href=""
           ><li class="Women-menu">Women</li></a
         >
         <a  class="new-featured-menu px-2 py-4  hover:opacity-50" href=""
           ><li class="Kids-menu">Kids</li></a
         >
-        <a  class="new-featured-menu px-2 py-4  hover:opacity-50" href=""
+        <a id="acc-menu-btn"  class="new-featured-menu px-2 py-4  hover:opacity-50" href=""
           ><li class="Accessories-menu">Accessories</li></a
+        > 
+        <a id="sale-menu-btn"  class="new-featured-menu px-2 py-4  hover:opacity-50" href=""
+          ><li class="Accessories-menu">Sales</li></a
         >
       </ul>
     </div>
@@ -83,10 +86,10 @@
       </a>
     </div>
   </div>
-  <div id="dropdown-1" class="absolute z-100 duration-300 h-[0px]  w-full flex-col bg-white text-gray-800 group-hover:visible">
+  <div id="dropdown-1" class="flex absolute z-100 duration-300 h-[0px]  w-full flex-col bg-white text-gray-800 group-hover:visible">
     <div id="below-dropdown-1" class="opacity-0 pointer-events-none p-6 w-full flex gap-20 justify-center">
       <div>
-        <h3 class="font-semibold">New Markdowns</h3>
+        <h3 class="font-semibold">New Styles Added</h3>
         <ul class="pt-4 text-gray-600">
           <li class="pt-2 cursor-pointer hover:text-black">Sale: Up to 50% Off</li>
         </ul>
@@ -150,4 +153,8 @@
       </div>
     </div>
   </div>
+  <men-container id="men-container" class="flex absolute z-100 duration-300 h-[0px]  w-full flex-col bg-white text-gray-800 group-hover:visible"></men-container>
+  <women-container id="women-container" class="flex absolute z-100 duration-300 h-[0px]  w-full flex-col bg-white text-gray-800 group-hover:visible"></women-container>
+  <acc-container id="acc-container" class="flex absolute z-100 duration-300 h-[0px]  w-full flex-col bg-white text-gray-800 group-hover:visible"></acc-container>
+  <sale-container id="sale-container" class="flex absolute z-100 duration-300 h-[0px]  w-full flex-col bg-white text-gray-800 group-hover:visible"></sale-container>
 </div>

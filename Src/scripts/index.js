@@ -1,14 +1,14 @@
 // function btn back and next
-function next_ (element,btn){
-  btn.addEventListener("click",function(){
+function next_(element, btn) {
+  btn.addEventListener("click", function () {
     element.scrollBy({
       left: 300,
       behavior: "smooth",
     });
   });
 }
-function back_ (element,btn){
-  btn.addEventListener("click",function(){
+function back_(element, btn) {
+  btn.addEventListener("click", function () {
     element.scrollBy({
       left: -300,
       behavior: "smooth",
@@ -17,16 +17,14 @@ function back_ (element,btn){
 }
 // function block
 
-
 //test
 fetch("../components/layouts/test.html")
-  .then((res)=> res.text())
+  .then((res) => res.text())
   .then((data) => {
     document.querySelector(".test-layout").innerHTML = data;
-    document.dispatchEvent(new Event('TestComponentLoaded'));
-})
-.catch((error) => console.error("Erro Fetching included file:", error));
-
+    document.dispatchEvent(new Event("TestComponentLoaded"));
+  })
+  .catch((error) => console.error("Erro Fetching included file:", error));
 
 // Header
 const header = document.querySelector(".header-layout");
@@ -34,7 +32,6 @@ fetch("../components/layouts/header.html")
   .then((res) => res.text())
   .then((data) => {
     header.innerHTML = data;
-    
   })
   .catch((error) => console.error("Error fetching included file:", error));
 ////////
@@ -49,42 +46,346 @@ fetch("../components/layouts/navbar.html")
     var btn2 = document.querySelector(".new-featured-menu");
     var dropdowm_1 = document.getElementById("dropdown-1");
     let below_dropdown_1 = document.getElementById("below-dropdown-1");
-    let navbar = document.getElementById("navbar");
     btn2.addEventListener("mouseover", function () {
-      dropdowm_1.classList.add('h-[400px]');
-      below_dropdown_1.classList.add('opacity-100');
+      below_dropdown_1.classList.remove("pointer-events-none");
+      dropdowm_1.classList.add("h-[400px]");
+      below_dropdown_1.classList.add("opacity-100");
     });
     dropdowm_1.addEventListener("mouseover", function () {
-      dropdowm_1.classList.add('h-[400px]');
-      below_dropdown_1.classList.add('opacity-100');
+      below_dropdown_1.classList.remove("pointer-events-none");
+      dropdowm_1.classList.add("h-[400px]");
+      below_dropdown_1.classList.add("opacity-100");
     });
     btn2.addEventListener("mouseout", function () {
-      dropdowm_1.classList.remove('h-[400px]');
-      below_dropdown_1.classList.remove('opacity-100');
+      dropdowm_1.classList.remove("h-[400px]");
+      below_dropdown_1.classList.remove("opacity-100");
+      below_dropdown_1.classList.add("pointer-events-none");
     });
     dropdowm_1.addEventListener("mouseout", function () {
-      dropdowm_1.classList.remove('h-[400px]');
-      below_dropdown_1.classList.remove('opacity-100');
+      dropdowm_1.classList.remove("h-[400px]");
+      below_dropdown_1.classList.remove("opacity-100");
+      below_dropdown_1.classList.add("pointer-events-none");
     });
 
-    // for (var i = 0; i < btn2.length; i++) {
-    //   if (btn2[i]) {
-    //     btn2[i].addEventListener("mouseover", function () {
-    //       dropdowm_1.style.display = "flex";
-    //       addBlur();
-    //     });
-    //     dropdowm_1.addEventListener("mouseover", function () {
-    //       dropdowm_1.style.display = "flex";
-    //       addBlur();
-    //     });
-    //     dropdowm_1.addEventListener("mouseout", function () {
-    //       dropdowm_1.style.display = "none";
-    //       removeBlur();
-    //     });
-    //   } else {
-    //     console.error("Button with ID 'btn2' not found.");
-    //   }
-    // }
+    const menDropdown = {
+      "New Styles Added": ["Sale Up to 50% Off"],
+      "New & Featured": [
+        "New Arrivals",
+        "Best Sellers",
+        "Customize with Nike by You",
+        "New in Jordan",
+        "Golf x Lifestyle",
+        "Add to Bag to See Price",
+      ],
+      "All Shoes": [
+        "Lifestyle",
+        "Jordan",
+        "Dunk",
+        "Air Max",
+        "Air Force 1",
+        "Training & Gym",
+        "Basketball",
+        "Running",
+        "Nike SB",
+        "Sandals & Slides",
+        "Shoes $100 & Under",
+      ],
+      "All Clothing": [
+        "Jordan",
+        "Matching Sets",
+        "Big & Tall",
+        "Hoodies & Sweatshirts",
+        "Pants & Tights",
+        "Jackets & Vests",
+        "Tops & T-Shirts",
+        "Shorts",
+        "Underwear",
+        "Socks",
+      ],
+      "Shop by Sport": [
+        "Basketball",
+        "Golf",
+        "Soccer",
+        "Running",
+        "Tennis",
+        "Baseball",
+        "Football",
+        "Training & Gym",
+        "Trail Running",
+        "Swimming",
+        "Pickleball",
+      ],
+    };
+    const womenDropdown = {
+      "New Styles Added gg": ["Sale: Up to 50% Off"],
+      "New & Featured": [
+        "New Arrivals",
+        "Best Sellers",
+        "Customize with Nike by You",
+        "The Color Shop",
+        "Marathon Capsule",
+        "Add to Bag to See Price",
+      ],
+      "All Shoes": [
+        "Lifestyle",
+        "Jordan",
+        "Dunk",
+        "Air Max",
+        "Air Force 1",
+        "Training & Gym",
+        "Basketball",
+        "Running",
+        "Nike SB",
+        "Sandals & Slides",
+        "Shoes $100 & Under",
+      ],
+      "All Clothing": [
+        "Jordan",
+        "Matching Sets",
+        "Plus Size",
+        "Hoodies & Sweatshirts",
+        "Pants",
+        "Leggings",
+        "Bras",
+        "Jackets & Vests",
+        "Tops & T-Shirts",
+        "Shorts",
+        "Socks",
+      ],
+      "Shop by Sport": [
+        "Basketball",
+        "Golf",
+        "Soccer",
+        "Running",
+        "Tennis",
+        "Fitness",
+        "Yoga",
+        "Track & Field",
+        "Softball",
+        "Swimming",
+        "Pickleball",
+      ],
+    };
+    const accDropdown = {
+      "New Styles Added": ["Sale: Up to 50% Off"],
+      Featured: ["New in Golf Gear", "Add to Bag to See Price"],
+      "All Accessories": [
+        "Socks",
+        "Bags & Backpacks",
+        "Hats & Headwear",
+        "Sunglasses & Eyewear",
+        "Water Bottles & Hydration",
+        "Gloves",
+        "Jordan",
+        "Belts",
+      ],
+      "Shop by Sport": [
+        "Basketball",
+        "Golf",
+        "Soccer",
+        "Running",
+        "Tennis",
+        "Baseball",
+        "Football",
+        "Training & Gym",
+      ],
+    };
+    const saleDropdown = {
+      "New Styles Added": ["Sale: Up to 50% Off"],
+      "All Sale": ["Sale Shoes", "Sale Clothing", "Sale Accessories"],
+      Men: ["Shoes", "Clothing", "Accessories", "Shop All"],
+      Women: ["Shoes", "Clothing", "Accessories", "Shop All"],
+      Kids: ["Shoes", "Clothing", "Accessories", "Shop All"],
+    };
+    const nikeDropdown = {
+      "New Styles Added": ["Sale: Up to 50% Off"],
+      "New & Featured": [
+        "New Arrivals",
+        "Best Sellers",
+        "Teen Girl Essentials",
+        "Skate X Lifestyle",
+        "Summer Pastels",
+        "Add to Bag to See Price",
+      ],
+      "Shoes by Size": [
+        "Big Kids (1Y - 7Y)",
+        "Little Kids (8C - 3Y)",
+        "Baby & Toddler (1C - 10C)",
+      ],
+      "All Shoes": [
+        "Lifestyle",
+        "Jordan",
+        "Dunk",
+        "Air Max",
+        "Air Force 1",
+        "Basketball",
+        "Running",
+        "Sandals & Slides",
+      ],
+      "Clothing by Size": [
+        "Big Kids (XS - XL)",
+        "Little Kids (4 - 7)",
+        "Baby & Toddler (0M - 4T)",
+        "Extended Sizing",
+      ],
+      "All Clothing": [
+        "Jordan",
+        "Matching Sets",
+        "Tops & T-Shirts",
+        "Shorts",
+        "Hoodies & Sweatshirts",
+        "Jackets & Vests",
+        "Pants & Tights",
+        "Bras",
+        "Socks",
+      ],
+      "Shop by Sport": [
+        "Basketball",
+        "Golf",
+        "Soccer",
+        "Running",
+        "Baseball",
+        "Football",
+        "Softball",
+        "Tennis",
+        "Dance",
+        "Swimming",
+        "Skateboarding",
+      ],
+    };
+
+    console.log(nikeDropdown);
+
+    // Container element
+    const menContainer = document.getElementById("men-container");
+    const womenContainer = document.getElementById("women-container");
+    const accContainer = document.getElementById("acc-container");
+    const saleContainer = document.getElementById("sale-container");
+
+    // Function to create HTML markup for a section
+    function createSectionHTML(sectionTitle, sectionContent) {
+      let html = `<div >`;
+      html += `<h3 class="font-semibold">${sectionTitle}</h3>`;
+      html += `<ul class="pt-4 text-gray-600">`;
+
+      // Check if section content is an array or an object
+      if (Array.isArray(sectionContent)) {
+        sectionContent.forEach((item) => {
+          html += `<li class="pt-2 cursor-pointer hover:text-black ">${item}</li>`;
+        });
+      } else {
+        for (const [subSectionTitle, subSectionContent] of Object.entries(
+          sectionContent
+        )) {
+          html += `<h3 class="font-semibold">${subSectionTitle}</h3>`;
+          html += `<ul class="pt-4 text-gray-600">`;
+          subSectionContent.forEach((item) => {
+            html += `<li class="pt-2 cursor-pointer hover:text-black">${item} hi</li>`;
+          });
+          html += `</ul>`;
+        }
+      }
+      html += `</ul></div>`;
+      return html;
+    }
+
+    // Generate HTML markup for each section
+    let html = `
+  <div class=" opacity-0 pointer-events-none p-6 w-full  flex gap-20 justify-center">
+  `;
+    for (const [sectionTitle, sectionContent] of Object.entries(menDropdown)) {
+      html += createSectionHTML(sectionTitle, sectionContent);
+    }
+    html += `</div>`;
+    // Set the innerHTML of the container
+    menContainer.innerHTML = html;
+
+    // Generate HTML markup for each section
+    html = `
+    <div class=" opacity-0 pointer-events-none p-6 w-full  flex gap-20 justify-center">
+    `;
+    for (const [sectionTitle, sectionContent] of Object.entries(
+      womenDropdown
+    )) {
+      html += createSectionHTML(sectionTitle, sectionContent);
+    }
+    html += `</div>`;
+    // Set the innerHTML of the container
+    womenContainer.innerHTML = html;
+
+    html = `
+    <div class=" opacity-0 pointer-events-none p-6 w-full  flex gap-20 justify-center">
+    `;
+    for (const [sectionTitle, sectionContent] of Object.entries(accDropdown)) {
+      html += createSectionHTML(sectionTitle, sectionContent);
+    }
+    html += `</div>`;
+    // Set the innerHTML of the container
+    accContainer.innerHTML = html;
+
+    html = `
+    <div class=" opacity-0 pointer-events-none p-6 w-full  flex gap-20 justify-center">
+    `;
+    for (const [sectionTitle, sectionContent] of Object.entries(saleDropdown)) {
+      html += createSectionHTML(sectionTitle, sectionContent);
+    }
+    html += `</div>`;
+    // Set the innerHTML of the container
+    saleContainer.innerHTML = html;
+
+    // men menu navbar dropdown
+    const btnDropdown = document.getElementById("men-menu-btn");
+    const meBelowdropdown = document.querySelector("#men-container div");
+    btnDropdown.addEventListener("mouseover", () => {
+      dropdown(btnDropdown, meBelowdropdown, menContainer, "h-[450px]");
+    });
+    // men menu navbar dropdown
+    const womenBtnDropdown = document.getElementById("women-menu-btn");
+    const womenBelowdropdown = document.querySelector("#women-container div");
+    womenBtnDropdown.addEventListener("mouseover", () => {
+      dropdown(
+        womenBtnDropdown,
+        womenBelowdropdown,
+        womenContainer,
+        "h-[450px]"
+      );
+    });
+
+    const accBtnDropdown = document.getElementById("acc-menu-btn");
+    const accBelowdropdown = document.querySelector("#acc-container div");
+    accBtnDropdown.addEventListener("mouseover", () => {
+      dropdown(accBtnDropdown, accBelowdropdown, accContainer, "h-[350px]");
+    });
+
+    const saleBtnDropdown = document.getElementById("sale-menu-btn");
+    const saleBelowdropdown = document.querySelector("#sale-container div");
+    saleBtnDropdown.addEventListener("mouseover", () => {
+      dropdown(saleBtnDropdown, saleBelowdropdown, saleContainer, "h-[240px]");
+    });
+
+    //////////
+    function dropdown(btnDropdown, meBelowdropdown, menContainer, h) {
+      btnDropdown.addEventListener("mouseover", function () {
+        meBelowdropdown.classList.remove("pointer-events-none");
+        menContainer.classList.add(h);
+        meBelowdropdown.classList.add("opacity-100");
+      });
+      menContainer.addEventListener("mouseover", function () {
+        meBelowdropdown.classList.remove("pointer-events-none");
+        menContainer.classList.add(h);
+        meBelowdropdown.classList.add("opacity-100");
+      });
+      btnDropdown.addEventListener("mouseout", function () {
+        menContainer.classList.remove(h);
+        meBelowdropdown.classList.remove("opacity-100");
+        meBelowdropdown.classList.add("pointer-events-none");
+      });
+      menContainer.addEventListener("mouseout", function () {
+        menContainer.classList.remove(h);
+        meBelowdropdown.classList.remove("opacity-100");
+        meBelowdropdown.classList.add("pointer-events-none");
+      });
+    }
 
     ///////////////////////////
     //sidebar
@@ -92,13 +393,12 @@ fetch("../components/layouts/navbar.html")
     var min_menu_btn = document.querySelector("#min-menu-btn");
     let all_except_sidebar = document.querySelector("#all-except-sidebar");
 
-
     min_menu_btn.addEventListener("click", function () {
-        all_except_sidebar.style.position = "fixed";
-        sidebar_section.style.right = "0%";
-      });
+      all_except_sidebar.style.position = "fixed";
+      sidebar_section.style.right = "0%";
+    });
 
-      document.dispatchEvent(new Event('headerComponentLoaded'));
+    document.dispatchEvent(new Event("headerComponentLoaded"));
   })
   .catch((error) => console.error("Error fetching included file:", error));
 //Hero Section
@@ -121,12 +421,13 @@ fetch("../components/layouts/trending-section.html")
     // action click on back btn
     const trending_back_btn = document.querySelector("#trending-back-btn");
     const trending_next_btn = document.querySelector("#trending-next-btn");
-    const trending_container = document.querySelector("#trending-scroll-container");
+    const trending_container = document.querySelector(
+      "#trending-scroll-container"
+    );
 
     // call function back_ and next_ ,for btn back and next
-    back_(trending_container,trending_back_btn);
-    next_(trending_container,trending_next_btn);
-    
+    back_(trending_container, trending_back_btn);
+    next_(trending_container, trending_next_btn);
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
@@ -135,7 +436,7 @@ const featured_section = document.querySelector(".featured-section-layout");
 fetch("../components/layouts/featured-section.html")
   .then((res) => res.text())
   .then((data) => {
-    featured_section.innerHTML = data; 
+    featured_section.innerHTML = data;
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
@@ -145,14 +446,16 @@ fetch("../components/layouts/carousel-classic.html")
   .then((res) => res.text())
   .then((data) => {
     carousel_classic.innerHTML = data;
-        // action click on back btn
+    // action click on back btn
     const classic_back_btn = document.querySelector("#classic-back-btn");
     const classic_next_btn = document.querySelector("#classic-next-btn");
-    const classic_container = document.querySelector("#classic-scroll-container");
+    const classic_container = document.querySelector(
+      "#classic-scroll-container"
+    );
 
     // call function back_ and next_ ,for btn back and next
-    back_(classic_container,classic_back_btn);
-    next_(classic_container,classic_next_btn);
+    back_(classic_container, classic_back_btn);
+    next_(classic_container, classic_next_btn);
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
@@ -168,9 +471,8 @@ fetch("../components/layouts/spot-section.html")
     const spot_container = document.querySelector("#spot-scroll-container");
 
     // call function back_ and next_ ,for btn back and next
-    back_(spot_container,spot_back_btn);
-    next_(spot_container,spot_next_btn);
-    
+    back_(spot_container, spot_back_btn);
+    next_(spot_container, spot_next_btn);
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
@@ -180,14 +482,16 @@ fetch("../components/layouts/carousel-popular.html")
   .then((res) => res.text())
   .then((data) => {
     carousel_popular.innerHTML = data;
-   // action click on back btn
+    // action click on back btn
     const popular_back_btn = document.querySelector("#popular-back-btn");
     const popular_next_btn = document.querySelector("#popular-next-btn");
-    const popular_container = document.querySelector("#popular-scroll-container");
+    const popular_container = document.querySelector(
+      "#popular-scroll-container"
+    );
 
     // call function back_ and next_ ,for btn back and next
-    back_(popular_container,popular_back_btn);
-    next_(popular_container,popular_next_btn);
+    back_(popular_container, popular_back_btn);
+    next_(popular_container, popular_next_btn);
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
@@ -203,8 +507,8 @@ fetch("../components/layouts/member-section.html")
     const member_container = document.querySelector("#member-scroll-container");
 
     // call function back_ and next_ ,for btn back and next
-    back_(member_container,member_back_btn);
-    next_(member_container,member_next_btn);
+    back_(member_container, member_back_btn);
+    next_(member_container, member_next_btn);
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
@@ -217,13 +521,12 @@ fetch("../components/layouts/menu-section.html")
     let menu_below_hover = document.querySelector("#menu-below-hover");
     const menu_below_btn = document.querySelectorAll(".menu-below-btn");
 
-
-    for (var i=0;i<menu_below_btn.length;i++){
-      menu_below_btn[i].addEventListener('mouseover',function(){
-        menu_below_hover.style.height = '500px';
+    for (var i = 0; i < menu_below_btn.length; i++) {
+      menu_below_btn[i].addEventListener("mouseover", function () {
+        menu_below_hover.style.height = "500px";
       });
-      menu_below_btn[i].addEventListener('mouseout',function(){
-        menu_below_hover.style.height = '14.5vh';
+      menu_below_btn[i].addEventListener("mouseout", function () {
+        menu_below_hover.style.height = "14.5vh";
       });
     }
   })
@@ -236,5 +539,3 @@ fetch("../components/layouts/footer.html")
     footer.innerHTML = data;
   })
   .catch((error) => console.error("Error fetching included file:", error));
-
-
