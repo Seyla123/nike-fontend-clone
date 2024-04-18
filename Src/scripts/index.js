@@ -17,14 +17,6 @@ function back_(element, btn) {
 }
 // function block
 
-//test
-fetch("../components/layouts/test.html")
-  .then((res) => res.text())
-  .then((data) => {
-    document.querySelector(".test-layout").innerHTML = data;
-    document.dispatchEvent(new Event("TestComponentLoaded"));
-  })
-  .catch((error) => console.error("Erro Fetching included file:", error));
 
 // Header
 const header = document.querySelector(".header-layout");
@@ -261,6 +253,7 @@ fetch("../components/layouts/navbar.html")
     const womenContainer = document.getElementById("women-container");
     const accContainer = document.getElementById("acc-container");
     const saleContainer = document.getElementById("sale-container");
+    const kidContainer = document.getElementById("kid-container");
 
     // Function to create HTML markup for a section
     function createSectionHTML(sectionTitle, sectionContent) {
@@ -361,6 +354,12 @@ fetch("../components/layouts/navbar.html")
     const saleBelowdropdown = document.querySelector("#sale-container div");
     saleBtnDropdown.addEventListener("mouseover", () => {
       dropdown(saleBtnDropdown, saleBelowdropdown, saleContainer, "h-[240px]");
+    });
+
+    const kidBtnDropdown = document.getElementById("kid-menu-btn");
+    const kidBelowdropdown = document.querySelector("#kid-container div");
+    kidBtnDropdown.addEventListener("mouseover", () => {
+      dropdown(kidBtnDropdown, kidBelowdropdown, kidContainer, "h-[560px]");
     });
 
     //////////
