@@ -16,7 +16,9 @@
   font-weight: 400;
   font-style: normal;
 }
-
+.helvetica{
+  font-family: "Helvetica Now Text", Helvetica, Arial, sans-serif;
+}
 }
 body {
   font-size: inherit;

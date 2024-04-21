@@ -54,11 +54,24 @@ fetch("../components/layouts/kid/trending-section.html")
   .catch((error) => console.error("Error fetching included file:", error));
 
   // kid-menu
-const kidMenu = document.querySelector(".kid-menu-section");
+const kidMenuSection = document.querySelector(".kid-menu-section");
 fetch("../components/layouts/kid/kid-menu.html")
   .then((res) => res.text())
   .then((data) => {
-    kidMenu.innerHTML = data;
+    kidMenuSection.innerHTML = data;
+    const kidMenu = document.querySelector("#kidMenu");
+    const kidMenuH3 = document.querySelector("#kidMenu h3");
+    window.addEventListener('scroll', function() {
+      if(kidMenu.offsetTop - window.scrollY <= 0){
+        kidMenu.classList.add("py-0");
+        kidMenuH3.classList.remove("text-2xl");
+      }
+      if(kidMenu.offsetTop - window.scrollY > 10){
+        kidMenu.classList.remove("py-0");
+        kidMenuH3.classList.add("text-2xl");
+      }
+    })
+
   })
   .catch((error) => console.error("Error fetching included file:", error));
 //promotion.html
