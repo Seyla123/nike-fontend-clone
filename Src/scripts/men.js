@@ -30,6 +30,19 @@ fetch("../components/layouts/men/men-menu.html")
   .then((res) => res.text())
   .then((data) => {
     men_menu.innerHTML = data;
+    const menMenuDiv = document.querySelector("#menMenuDiv");
+    const menMenu = document.querySelector("#menMenu");
+    const menMenuH3 = document.querySelector("#menMenu h3");
+    window.addEventListener("scroll", function () {
+      if (menMenuDiv.offsetTop - window.scrollY <= 0) {
+        menMenu.classList.add("py-0");
+        menMenuH3.classList.remove("text-2xl");
+      }
+      if (menMenuDiv.offsetTop - window.scrollY > 10) {
+        menMenu.classList.remove("py-0");
+        menMenuH3.classList.add("text-2xl");
+      }
+    });
   })
   .catch((error) => console.error("Error fetching included file:", error));
   // men-hero-section 

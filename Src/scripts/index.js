@@ -24,6 +24,24 @@ fetch("../components/layouts/header.html")
   .then((res) => res.text())
   .then((data) => {
     header.innerHTML = data;
+    const helpBtn = document.querySelector("#helpBtn");
+    const helpDropdown = document.querySelector("#helpDropdown");
+    helpBtn.addEventListener("mouseover", function () {
+      helpDropdown.classList.remove("opacity-0","pointer-events-none")
+      helpDropdown.classList.add("top-10")
+    })
+    helpDropdown.addEventListener("mouseover", function () {
+      helpDropdown.classList.remove("opacity-0","pointer-events-none")
+      helpDropdown.classList.add("top-10")
+    })
+    helpBtn.addEventListener("mouseout", function () {
+      helpDropdown.classList.add("opacity-0")
+      helpDropdown.classList.remove("top-10","pointer-events-none")
+    })
+    helpDropdown.addEventListener("mouseout", function () {
+      helpDropdown.classList.add("opacity-0",)
+      helpDropdown.classList.remove("top-10","pointer-events-none")
+    })
   })
   .catch((error) => console.error("Error fetching included file:", error));
 ////////
@@ -407,6 +425,7 @@ fetch("../components/layouts/hero-section.html")
   .then((res) => res.text())
   .then((data) => {
     hero_section.innerHTML = data;
+
   })
   .catch((error) => console.error("Error fetching included file:", error));
 //////////
