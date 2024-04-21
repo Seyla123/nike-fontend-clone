@@ -1,4 +1,4 @@
-![Git-flow-strategy](/uploads/23d07c043450555bcd052e89a1916906/Git-flow-strategy.png)
+![image](https://github.com/Seyla123/Clone-Nike-Ind/assets/89925541/6be663ee-6f13-4466-92af-33aa549eb189)
 
 1. **Understanding Git-Flow**
 
