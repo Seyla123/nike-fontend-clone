@@ -41,6 +41,13 @@ fetch("../components/layouts/kid/popular-section.html")
   .then((res) => res.text())
   .then((data) => {
     popularSection.innerHTML = data;
+    const popular_back_btn = document.querySelector("#popular-back-btn");
+    const popular_next_btn = document.querySelector("#popular-next-btn");
+    const popular_container = document.querySelector("#popular-scroll-container");
+
+    // call function back_ and next_ ,for btn back and next
+    back_(popular_container,popular_back_btn);
+    next_(popular_container,popular_next_btn);
   })
   .catch((error) => console.error("Error fetching included file:", error));
 

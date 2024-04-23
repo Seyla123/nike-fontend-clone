@@ -264,7 +264,6 @@ fetch("../components/layouts/navbar.html")
       ],
     };
 
-    console.log(nikeDropdown);
 
     // Container element
     const menContainer = document.getElementById("men-container");
