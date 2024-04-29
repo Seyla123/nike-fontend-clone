@@ -15,8 +15,19 @@ function back_(element, btn) {
     });
   });
 }
-// function block
-
+/// function
+function clickDropdownMiniMenu(menu,dropdown,height){
+  let isActive = false;
+  menu.addEventListener('click', (event)=>{
+    isActive = !isActive;
+    if(isActive){
+      dropdown.classList.add(height)
+    }
+    else{
+      dropdown.classList.remove(height)
+    }
+  })
+}
 
 // Header
 const header = document.querySelector(".header-layout");
@@ -40,8 +51,10 @@ fetch("../components/layouts/header.html")
     })
     helpDropdown.addEventListener("mouseout", function () {
       helpDropdown.classList.add("opacity-0",)
-      helpDropdown.classList.remove("top-10","pointer-events-none")
+      helpDropdown.classList.add("top-10","pointer-events-none")
     })
+
+
   })
   .catch((error) => console.error("Error fetching included file:", error));
 ////////
@@ -546,6 +559,26 @@ fetch("../components/layouts/menu-section.html")
         menu_below_hover.style.height = "14.5vh";
       });
     }
+
+  //mini Menu Feature
+    const minifeaturedMenu = document.querySelector("#featuredMiniMenu");
+    const dropdownfeaturedMiniMenu = document.querySelector("#featuredMiniMenu ul")
+    clickDropdownMiniMenu(minifeaturedMenu,dropdownfeaturedMiniMenu,"h-[200px]")
+//mini Shoe Feature
+    const miniShoeMenu = document.querySelector("#ShoeMiniMenu");
+    const dropdownShoeMiniMenu = document.querySelector("#ShoeMiniMenu ul")
+    clickDropdownMiniMenu(miniShoeMenu,dropdownShoeMiniMenu,"h-[200px]")
+  //mini Clothing Feature
+  const miniClothingMenu = document.querySelector("#ClothingMiniMenu");
+  const dropdownClothingMiniMenu = document.querySelector("#ClothingMiniMenu ul")
+  clickDropdownMiniMenu(miniClothingMenu,dropdownClothingMiniMenu,"h-[370px]")
+    //mini Clothing Feature
+    const miniKidsMiniMenu = document.querySelector("#KidsMiniMenu");
+    const dropdownKidsMiniMenu = document.querySelector("#KidsMiniMenu ul")
+    clickDropdownMiniMenu(miniKidsMiniMenu,dropdownKidsMiniMenu,"h-[250px]")
+//200px 200px 370px 250px
+    
+
   })
   .catch((error) => console.error("Error fetching included file:", error));
 //footer.html
@@ -554,5 +587,18 @@ fetch("../components/layouts/footer.html")
   .then((res) => res.text())
   .then((data) => {
     footer.innerHTML = data;
+    //200px 150px 120px 
+    const miniHelpFooter = document.querySelector("#miniHelpFooter")
+    const dropdownMiniHelpFooter = document.querySelector("#dropdownMiniHelpFooter")
+    clickDropdownMiniMenu(miniHelpFooter,dropdownMiniHelpFooter,"h-[200px]")
+
+    const miniCompanyFooter = document.querySelector("#miniCompanyFooter")
+    const dropdownMiniCompanyFooter = document.querySelector("#dropdownMiniCompanyFooter")
+    clickDropdownMiniMenu(miniCompanyFooter,dropdownMiniCompanyFooter,"h-[150px]")
+
+    const miniPromoteFooter = document.querySelector("#miniPromoteFooter")
+    const dropdownMiniPromoteFooter = document.querySelector("#dropdownMiniPromoteFooter")
+    clickDropdownMiniMenu(miniPromoteFooter,dropdownMiniPromoteFooter,"h-[120px]")
+    
   })
   .catch((error) => console.error("Error fetching included file:", error));

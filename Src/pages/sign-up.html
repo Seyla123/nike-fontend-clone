@@ -32,46 +32,56 @@
             <div>We've sent a code to
                 <div class="space-y-2">
                     <span class="emailSingIn">Mrrseyla.758@gmail.com</span>
-                    <a class="underline text-gray-500" href="">Edit</a>
+                    <a class="underline text-gray-500" href="../pages/sign-in.html">Edit</a>
                 </div>
             </div>
             
             <div class="w-full">
-                <form action="" id="formEmail" name="emailForm"  class="w-full ">
+                <form action="../pages/index.html" id="formEmail" name="emailForm"  class="w-full ">
 
-                    <div class="flex flex-col gap-6">
+                    <div class="flex flex-col gap-8">
                         <div>
                             <div class="h-14 relative">
                                 <input id="inputCode" type="text" class="px-4  outline outline-1 w-full h-full rounded-lg" required>
-                                <label id="labelCode" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300" for="">Code*</label>
+                                <label id="labelCode" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300 pointer-events-none" for="">Code*</label>
                                 <div class="w-6  absolute top-[30%] hover:text-gray-500 rounded-full right-3">
                                     <img src="../Images/circle.png" class="text-gray-500" alt="">
                                 </div>
                                 
                                 <div class="flex justify-between ">
-                                    <label id="labelCodeRequired" class="text-red-600 font-medium px-4 text-[12px] invisible">Required</label>
-                                    <label id="labelCodeRequired" class="text-gray-500 font-medium px-4 text-[12px] ">Resend code in 28s</label>
+                                    <div>
+                                        <label id="labelCodeRequired" class="text-red-600 font-medium px-4 text-[12px] py-2 hidden">Required</label>
+                                        <label for="" class="invisible"></label>
+                                    </div>
+                                    <label id="labelCodeRequired" class="text-gray-500 font-medium px-4 text-[12px] py-2">Resend code in 28s</label>
                                 </div>
                             </div>
                             
                         </div>
-                        <div class="flex gap-2">
-                            <div class="h-14 relative">
-                                <input id="inputFirstName" type="text" class="px-4  outline outline-1 w-full h-full rounded-lg" required>
-                                <label id="labelFirstName" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300" for="">First Name*</label>
-                                <label id="labelFirstNameRequired" class="text-red-600 font-medium px-4 text-[12px] hidden">Required</label>
+                        <div class="w-full h-14">
+                            <div class="flex w-full h-full gap-3">
+                                <div class=" w-full h-full">
+                                    <div class="h-14 relative">
+                                        <input id="inputFirstName" type="text" class="px-4  outline outline-1 w-full h-full rounded-lg" required>
+                                        <label id="labelFirstName" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300 pointer-events-none" for="">First Name*</label>
+                                        <label id="labelFirstNameRequired" class="text-red-600 font-medium px-4 text-[12px] py-2 hidden">Required</label>
+                                    </div>
+                                    
+                                </div>
+                                <div class=" w-full h-full">
+                                    <div class="h-14 relative ">
+                                        <input id="inputLastName" type="text" class="px-4  outline outline-1 w-full h-full rounded-lg" required>
+                                        <label id="labelLastName" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300 pointer-events-none" for="">Last Name*</label>
+                                        <label id="labelLastNameRequired" class=" text-red-600 font-medium px-4 text-[12px] hidden">Required</label>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="h-14 relative">
-                                <input id="inputLastName" type="text" class="px-4  outline outline-1 w-full h-full rounded-lg" required>
-                                <label id="labelLastName" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300" for="">Last Name*</label>
-                               
-                            </div>
-                            <label id="labelLastNameRequired" class="text-red-600 font-medium px-4 text-[12px] hidden">Required</label>
                         </div>
+                        
                         <div>
                             <div class="h-14 relative">
                                 <input id="inputPassword" type="text" class="px-4  outline outline-1 w-full h-full rounded-lg" required>
-                                <label id="labelPassword" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300" for="">Password*</label>   
+                                <label id="labelPassword" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300 pointer-events-none" for="">Password*</label>   
                             </div>
                             <label id="labelPasswordRequired" class="text-red-600 font-medium px-4 text-[12px] hidden ">Required</label>
                             <div class="flex px-4 gap-2 ">
@@ -92,17 +102,25 @@
                         
                         <div>
                             <div class="h-14 relative">
-                                <input id="inputShopping" type="text" class="px-4  outline outline-1 w-full h-full rounded-lg" required>
-                                <label id="labelShopping" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300" for="">Shopping Preference*</label>
+                                <input id="inputShopping" type="text" class="px-4  outline outline-1 w-full h-full rounded-lg pointer-events-none" >
+                                <label id="labelShopping" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300 pointer-events-none" for="">Shopping Preference*</label>
+                                <div class="absolute right-4 top-[25%]  duration-300 pointer-events-none w-6">
+                                    <img src="../Images/down-arrow.png" alt="">
+                                </div>
+                                <select id="shopping" name="shopping"  class="absolute left-0 z-0 w-full h-full opacity-0 w-50">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
                                 <label id="labelShoppingRequired" class="text-red-600 font-medium px-4 text-[12px] hidden">Required</label>
                             </div>
                         </div>
                         <div>
                             <div class="h-14 relative">
-                                <input id="inputDOB" type="text" class="px-4  outline outline-1 w-full h-full rounded-lg" required>
-                                <label id="labelDOB" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300" for="">Date of Birth*</label>
-                                <label id="labelDOBRequired" class="text-red-600 font-medium px-4 text-[12px] hidden">Required</label>
-                                <label id="labelDOBRequired" class="text-gray-500 font-medium px-4 text-[12px]">Get a Nike Member Reward on your birthday.</label>
+                                <input id="inputDOB" type="date" class="px-4  outline outline-1 w-full h-full rounded-lg" required>
+                                <label id="labelDOB" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300 pointer-events-none" for="">Date of Birth*</label>
+                                <label id="labelDOBRequired" class="text-red-600 font-medium px-4  hidden text-[12px]">Required</label>
+                                
+                                <label id="labelDOBDetail" class="text-gray-500 font-medium px-4 text-[12px]">Get a Nike Member Reward on your birthday.</label>
                             </div>
                         </div>
                         <div class="w-full">
