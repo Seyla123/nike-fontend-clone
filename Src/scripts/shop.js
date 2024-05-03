@@ -12591,7 +12591,7 @@ function sidebarCategoryDropdown(btn,dropdown,arrow,list){
 
   
     
-
+//selection sort 
 
     const selectSortBtn = document.querySelector("#selectSortBtn");
     const img = document.querySelector("#selectSortBtn span img");
@@ -12610,6 +12610,8 @@ function sidebarCategoryDropdown(btn,dropdown,arrow,list){
       }
       
     })
+
+
   })
   .catch((error) => console.error("Error fetching included file:", error));
 
@@ -12625,7 +12627,7 @@ function sidebarCategoryDropdown(btn,dropdown,arrow,list){
   toggleBtn.addEventListener("click", function(){
     if(isActicve){
       isActicve=false
-    contentAll.classList.add("blur-sm","fixed")
+    contentAll.classList.add("w-full","fixed")
     showContentToggle.classList.remove("hidden");
     toggleBtn.classList.add("left-[10px]")
     }else{

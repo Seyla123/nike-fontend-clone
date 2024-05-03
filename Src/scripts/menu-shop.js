@@ -25,5 +25,16 @@ fetch("../components/layouts/shop/miniMenu.html")
       contentAllMini.classList.remove("blur-sm", "fixed");
       toggleBtnMini.classList.remove("left-[10px]");
     });
+
+    //filter
+    const filterBtn = document.querySelector("#filterBtn");
+    const downBar = document.querySelector("#downBar");
+
+    filterBtn.addEventListener("click",function(){
+      const contentAll = document.querySelector("#contentAll")
+      downBar.classList.remove("hidden")
+      contentAll.classList.add("fixed")
+    })
+
   })
   .catch((error) => console.error("Error fetching included file:", error));
