@@ -7,6 +7,7 @@
     <link href="../styles/style.css" rel="stylesheet">
     <link href="../styles/login.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    
 
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +17,8 @@
 </head>
 
 <body onload="myFunction()">
-    <div id="showContentToggle" class="hidden flex backdrop-blur-sm bg-gray-400/45 fixed z-50 w-full h-full justify-center items-center">
+    <div id="showContentToggle"
+        class="hidden flex backdrop-blur-sm bg-gray-400/45 fixed z-50 w-full h-full justify-center items-center">
         <div class="bg-white w-full h-full lg:w-[30%] lg:h-[70%] lg:rounded-3xl flex flex-col justify-between p-12">
             <div class=" w-full h-full flex flex-col gap-4">
                 <div class=" w-full flex justify-between items-center pb-8">
@@ -27,17 +29,34 @@
                 </div>
                 <div class=" w-full h-14 relative">
                     <input id="inputLocation" class="px-12  outline outline-1 w-full h-full rounded-lg" type="text">
-                    
-                    <button class="w-6 absolute top-4 left-3 pointer-events-none" >
-                        <svg class="text-gray-500" aria-hidden="true" class="text-color-secondary" focusable="false" viewBox="0 0 24 24" role="presentation"  fill="none"><path stroke="currentColor" stroke-width="1.5" d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853"></path></svg>
+
+                    <button class="w-6 absolute top-4 left-3 pointer-events-none">
+                        <svg class="text-gray-500" aria-hidden="true" class="text-color-secondary" focusable="false"
+                            viewBox="0 0 24 24" role="presentation" fill="none">
+                            <path stroke="currentColor" stroke-width="1.5"
+                                d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853">
+                            </path>
+                        </svg>
                     </button>
                     <!-- top-4 left-12 -->
-                    <span id="spanLocation" class="absolute  text-gray-500 top-4 left-12 duration-700 px-1 pointer-events-none">Search Location</span>
-                    <button id="cancelLocationBtn" class="hidden w-6 absolute top-5 right-12 flex items-center" >
+                    <span id="spanLocation"
+                        class="absolute  text-gray-500 top-4 left-12 duration-700 px-1 pointer-events-none">Search
+                        Location</span>
+                    <button id="cancelLocationBtn" class="hidden w-6 absolute top-5 right-12 flex items-center">
                         <img class="size-4" src="../Images/cancel.png" alt="">
                     </button>
-                    <button class="w-6 absolute top-4 right-3" >
-                        <svg class="text-gray-500" aria-hidden="false" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none" aria-label="Location permission denied" color="#757575"><path fill="currentColor" fill-rule="evenodd" d="M21.328 19.548l-3.74-3.74-1.215 3.639-.712-.238.712.238v.001c-.67 1.995-3.486 2.078-4.231.081l-2.197-5.492-5.493-2.188c-1.981-.744-1.92-3.57.092-4.241l3.634-1.21-3.725-3.725 1.06-1.061 16.875 16.875-1.06 1.06zm-6.377-.577l1.451-4.349-7.038-7.038L5.019 9.03c-.685.228-.686 1.174-.036 1.415l.008.004 6.107 2.432 2.444 6.109.003.01c.24.651 1.176.651 1.406-.03z" clip-rule="evenodd"></path><path fill="currentColor" d="M18.65 12.627l2.223-6.66v-.002c.584-1.767-1.094-3.432-2.848-2.847l-6.665 2.22 1.186 1.186L18.5 4.54a.752.752 0 01.95.952l-1.985 5.949 1.186 1.185z"></path><title>Location permission denied</title></svg>
+                    <button class="w-6 absolute top-4 right-3">
+                        <svg class="text-gray-500" aria-hidden="false" focusable="false" viewBox="0 0 24 24" role="img"
+                            width="24px" height="24px" fill="none" aria-label="Location permission denied"
+                            color="#757575">
+                            <path fill="currentColor" fill-rule="evenodd"
+                                d="M21.328 19.548l-3.74-3.74-1.215 3.639-.712-.238.712.238v.001c-.67 1.995-3.486 2.078-4.231.081l-2.197-5.492-5.493-2.188c-1.981-.744-1.92-3.57.092-4.241l3.634-1.21-3.725-3.725 1.06-1.061 16.875 16.875-1.06 1.06zm-6.377-.577l1.451-4.349-7.038-7.038L5.019 9.03c-.685.228-.686 1.174-.036 1.415l.008.004 6.107 2.432 2.444 6.109.003.01c.24.651 1.176.651 1.406-.03z"
+                                clip-rule="evenodd"></path>
+                            <path fill="currentColor"
+                                d="M18.65 12.627l2.223-6.66v-.002c.584-1.767-1.094-3.432-2.848-2.847l-6.665 2.22 1.186 1.186L18.5 4.54a.752.752 0 01.95.952l-1.985 5.949 1.186 1.185z">
+                            </path>
+                            <title>Location permission denied</title>
+                        </svg>
 
                     </button>
                 </div>
@@ -48,15 +67,447 @@
                 <button class="px-6 bg-gray-300 rounded-full py-2 text-gray-500">Select</button>
             </div>
             <div class="lg:hidden w-full flex justify-center">
-                <button  class="w-[90%] px-6 py-4 rounded-full bg-gray-300 text-gray-500">Select</button>
+                <button class="w-[90%] px-6 py-4 rounded-full bg-gray-300 text-gray-500">Select</button>
             </div>
         </div>
     </div>
 
     </div>
-    <div id="downBar" class="w-full hidden bg-white h-[100vh] fixed z-50 ">
-        
+    <div id="downBar" class="w-full bottom-[-100%] duration-500 overflow-y-scroll bg-white h-[100vh] fixed z-50 p-8 space-y-4">
+        <div class="flex justify-between">
+            <span>Filter</span>
+            <buttom id="cancelDownbar" class="size-8 p-2 bg-black fill-white rounded-full flex justify-center items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z"/></svg>
+            </buttom>
+        </div>
+        <div class="flex space-y-4 flex-col">
+            <p class="font-semibold">Sort By</p>
+            <div class="space-y-2">
+                <div class="flex items-center">
+                    <input type="radio">
+                     <label for="Featured">Featured</label>
+                </div>
+                <div class="flex items-center"><input type="radio">
+                      <label for="Newest">Newest</label></div>
+                <div class="flex items-center"><input type="radio">
+                      <label for="Price : High-Low">Price : High-Low</label></div>
+                <div class="flex items-center"><input type="radio">
+                      <label for="Price : Low-Hight">Price : Low-Hight</label></div>
+            </div>
+        </div>
+        <div class="space-y-4">
+            <h1 class="font-semibold">Sale and Offers</h1>
+            <ul class="duration-700  flex flex-col justify-center space-y-2">
+                <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                    <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                        <span
+                            class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                            <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px"
+                                y="0px" width="100" height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                <path
+                                    d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                </path>
+                            </svg>
+                        </span>
+                    </button>
+                    <span>Mother's Day Sale: Extra 25% Off</span>
+                </li>
+                <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                    <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                        <span
+                            class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                            <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px"
+                                y="0px" width="100" height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                <path
+                                    d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                </path>
+                            </svg>
+                        </span>
+                    </button>
+                    <span>Price in Bag</span>
+                </li>
+                <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                    <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                        <span
+                            class="w-full spanCheck h-full size-4 bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                            <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px"
+                                y="0px" width="100" height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                <path
+                                    d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                </path>
+                            </svg>
+                        </span>
+                    </button>
+                    <span>Sale</span>
+                </li>
+
+
+            </ul>
+        </div>
+        <div class="space-y-4">
+            <h1 class="font-semibold">Gender</h1>
+            <ul
+                                        class="duration-700  flex flex-col justify-center space-y-2">
+
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Male</span>
+                                        </li>
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Female</span>
+                                        </li>
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Unisex</span>
+                                        </li>
+
+
+
+                                    </ul>
+
+        </div>
+        <div class="space-y-4">
+            <h1 class="font-semibold">Kids</h1>
+            <ul
+                                        class="duration-700  flex flex-col justify-center space-y-2">
+
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Boy</span>
+                                        </li>
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Girl</span>
+                                        </li>
+
+
+
+                                    </ul>
+
+        </div>
+        <div class="space-y-4">
+            <h1 class="font-semibold">Color</h1>
+            <div
+            class=" grid grid-cols-3 gap-3 space-y-2">
+
+            
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-black size-7 rounded-full"></div>
+                    <span>Black</span>
+                </div>
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-[#1790C8] size-7 rounded-full"></div>
+                    <span>Blue</span>
+                </div>
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-[#825D41] size-7 rounded-full"></div>
+                    <span>Brown</span>
+                </div>
+            
+            
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-[#7BBA3C] size-7 rounded-full"></div>
+                    <span>Green</span>
+                </div>
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-[#808080] size-7 rounded-full"></div>
+                    <span>Gray</span>
+                </div>
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-black size-7 rounded-full"></div>
+                    <span>Black</span>
+                </div>
+            
+            
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-[#F36B26] size-7 rounded-full"></div>
+                    <span>Orange</span>
+                </div>
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-[#F0728F] size-7 rounded-full"></div>
+                    <span>Pink</span>
+                </div>
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-[#8D429F] size-7 rounded-full"></div>
+                    <span>Purple</span>
+                </div>
+            
+            
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-[#E7352B] size-7 rounded-full"></div>
+                    <span>Red</span>
+                </div>
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-white border  size-7 rounded-full"></div>
+                    <span>White</span>
+                </div>
+                <div class="flex flex-col justify-center items-center ">
+                    <div class="bg-[#FED533] size-7 rounded-full"></div>
+                    <span>Yellow</span>
+                </div>
+            
+
+
+
+
+
+        </div>
+        </div>
+        <div class="space-y-4">
+            <h1 class="font-semibold">Shop by Price</h1>
+            <ul
+            class=" duration-700  flex flex-col justify-center space-y-2">
+            <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                    <span
+                        class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                        <svg class="size-4 left-[1px] absolute z-40 "
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                            height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                            <path
+                                d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                            </path>
+                        </svg>
+                    </span>
+                </button>
+                <span>$25 - $50</span>
+            </li>
+            <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                    <span
+                        class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                        <svg class="size-4 left-[1px] absolute z-40 "
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                            height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                            <path
+                                d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                            </path>
+                        </svg>
+                    </span>
+                </button>
+                <span>$50 - $100</span>
+            </li>
+            <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                    <span
+                        class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                        <svg class="size-4 left-[1px] absolute z-40 "
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                            height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                            <path
+                                d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                            </path>
+                        </svg>
+                    </span>
+                </button>
+                <span>$100 - $150</span>
+            </li>
+
+
+
+
+
+        </ul>
+        </div>
+        <div class="space-y-4">
+            <h1 class="font-semibold">Brand</h1>
+            <ul
+            class=" duration-700  flex flex-col justify-center space-y-2">
+            <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                    <span
+                        class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                        <svg class="size-4 left-[1px] absolute z-40 "
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                            height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                            <path
+                                d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                            </path>
+                        </svg>
+                    </span>
+                </button>
+                <span>Nike Soprtswear</span>
+            </li>
+            <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                    <span
+                        class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                        <svg class="size-4 left-[1px] absolute z-40 "
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                            height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                            <path
+                                d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                            </path>
+                        </svg>
+                    </span>
+                </button>
+                <span>Jordan</span>
+            </li>
+            <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                    <span
+                        class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                        <svg class="size-4 left-[1px] absolute z-40 "
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                            height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                            <path
+                                d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                            </path>
+                        </svg>
+                    </span>
+                </button>
+                <span>Nike By You</span>
+            </li>
+            <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                    <span
+                        class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0  duration-700">
+                        <svg class="size-4 left-[1px] absolute z-40 "
+                            xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                            height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                            <path
+                                d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                            </path>
+                        </svg>
+                    </span>
+                </button>
+                <span>Converse</span>
+            </li>
+
+
+
+
+
+        </ul>
+        </div>
+        <div class="space-y-4">
+            <h1 class="font-semibold">Sport and Activities</h1>
+            <ul
+                                        class="duration-700  flex space-y-2 flex-col justify-center">
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Lifestyle</span>
+                                        </li>
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Running</span>
+                                        </li>
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Tranning & Gym</span>
+                                        </li>
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Track and Field</span>
+                                        </li>
+
+
+                                    </ul>
+        </div>
     </div>
+
+
+    <!--  -->
     <div id="contentAll">
         <header-layout class="header-layout"></header-layout>
         <navbar-layout class="navbar-layout"></navbar-layout>
@@ -120,252 +571,351 @@
                             </li>
                             <li>
                                 <div class="flex flex-col py-4">
-                                    <button  class="btn w-full flex items-center justify-between">
+                                    <button class="btn w-full flex items-center justify-between">
                                         <p>Sale & Offers</p>
                                         <span class="w-4 duration-200">
                                             <img src="../Images/down-arrow.png" class="transition-all transform" alt="">
                                         </span>
                                     </button>
-                                    <ul  class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
+                                    <ul
+                                        class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-8 h-5 border border-gray-400 rounded relative">
-                                                <span class="arrow w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-8 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="arrow w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>Mother's Day Sale: Extra 25% Off</span>
                                         </li>
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>Price in Bag</span>
                                         </li>
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full size-4 bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full size-4 bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>Sale</span>
                                         </li>
-                                        
-    
+
+
                                     </ul>
                                 </div>
-                                
+
                                 <div class="flex flex-col py-4">
-                                    <button  class="btn w-full flex items-center justify-between">
+                                    <button class="btn w-full flex items-center justify-between">
                                         <p>Kids</p>
                                         <span class="w-4 duration-200">
                                             <img src="../Images/down-arrow.png" class="transition-all transform" alt="">
                                         </span>
                                     </button>
-                                    <ul  class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
-                                        
+                                    <ul
+                                        class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
+
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>Boy</span>
                                         </li>
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>Girl</span>
                                         </li>
-                                        
-                                        
-    
+
+
+
                                     </ul>
                                 </div>
                                 <div class="flex flex-col py-4">
-                                    <button  class="btn w-full flex items-center justify-between">
+                                    <button class="btn w-full flex items-center justify-between">
                                         <p>Colors</p>
                                         <span class="w-4 duration-200">
                                             <img src="../Images/down-arrow.png" class="transition-all transform" alt="">
                                         </span>
                                     </button>
-                                    <ul  class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
-                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-8 h-5 border border-gray-400 rounded relative">
-                                                <span class="arrow w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
-                                                </span>
-                                            </button>
-                                            <span>Boy</span>
+                                    <ul
+                                        class="dropdown opacity-0 h-0  duration-700 pointer-events-none  text-xs  flex flex-col justify-center">
+
+                                        <li class="flex items-center justify-between ">
+                                            <div>
+                                                <div class="bg-black size-7 rounded-full"></div>
+                                                <span>Black</span>
+                                            </div>
+                                            <div>
+                                                <div class="bg-[#1790C8] size-7 rounded-full"></div>
+                                                <span>Blue</span>
+                                            </div>
+                                            <div>
+                                                <div class="bg-[#825D41] size-7 rounded-full"></div>
+                                                <span>Brown</span>
+                                            </div>
                                         </li>
-                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
-                                                </span>
-                                            </button>
-                                            <span>Girl</span>
+                                        <li class="flex items-center justify-between p-4">
+                                            <div>
+                                                <div class="bg-[#7BBA3C] size-7 rounded-full"></div>
+                                                <span>Green</span>
+                                            </div>
+                                            <div>
+                                                <div class="bg-[#808080] size-7 rounded-full"></div>
+                                                <span>Gray</span>
+                                            </div>
+                                            <div>
+                                                <div class="bg-black size-7 rounded-full"></div>
+                                                <span>Black</span>
+                                            </div>
                                         </li>
-                                        
-                                        
-    
+                                        <li class="flex items-center justify-between p-4">
+                                            <div>
+                                                <div class="bg-[#F36B26] size-7 rounded-full"></div>
+                                                <span>Orange</span>
+                                            </div>
+                                            <div>
+                                                <div class="bg-[#F0728F] size-7 rounded-full"></div>
+                                                <span>Pink</span>
+                                            </div>
+                                            <div>
+                                                <div class="bg-[#8D429F] size-7 rounded-full"></div>
+                                                <span>Purple</span>
+                                            </div>
+                                        </li>
+                                        <li class="flex items-center justify-between p-4">
+                                            <div>
+                                                <div class="bg-[#E7352B] size-7 rounded-full"></div>
+                                                <span>Red</span>
+                                            </div>
+                                            <div>
+                                                <div class="bg-white border  size-7 rounded-full"></div>
+                                                <span>White</span>
+                                            </div>
+                                            <div>
+                                                <div class="bg-[#FED533] size-7 rounded-full"></div>
+                                                <span>Yellow</span>
+                                            </div>
+                                        </li>
+
+
+
+
+
                                     </ul>
                                 </div>
                                 <div class="flex flex-col py-4">
-                                    <button  class="btn w-full flex items-center justify-between">
+                                    <button class="btn w-full flex items-center justify-between">
                                         <p>Shop by Price</p>
                                         <span class="w-4 duration-200">
                                             <img src="../Images/down-arrow.png" class="transition-all transform" alt="">
                                         </span>
                                     </button>
-                                    <ul  class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
+                                    <ul
+                                        class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>$25 - $50</span>
                                         </li>
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>$50 - $100</span>
                                         </li>
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>$100 - $150</span>
                                         </li>
-                                        
-                                        
-                                        
-                                        
-    
+
+
+
+
+
                                     </ul>
                                 </div>
                                 <div class="flex flex-col py-4">
-                                    <button  class="btn w-full flex items-center justify-between">
+                                    <button class="btn w-full flex items-center justify-between">
                                         <p>Brand</p>
                                         <span class="w-4 duration-200">
                                             <img src="../Images/down-arrow.png" class="transition-all transform" alt="">
                                         </span>
                                     </button>
-                                    <ul  class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
+                                    <ul
+                                        class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>Nike Soprtswear</span>
                                         </li>
-                                        
-                                        
-                                        
-    
+
+
+
+
                                     </ul>
                                 </div>
-                                
+
                                 <div class="flex flex-col py-4">
-                                    <button  class="btn w-full flex items-center justify-between">
+                                    <button class="btn w-full flex items-center justify-between">
                                         <p>Sport and Activities</p>
                                         <span class="w-4 duration-200">
                                             <img src="../Images/down-arrow.png" class="transition-all transform" alt="">
                                         </span>
                                     </button>
-                                    <ul  class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
+                                    <ul
+                                        class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>Lifestyle</span>
                                         </li>
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>Running</span>
                                         </li>
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>Tranning & Gym</span>
                                         </li>
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
-                                            <button  class=" w-5 h-5 border border-gray-400 rounded relative">
-                                                <span class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
-                                                    <svg class="size-4 left-[1px] absolute z-40 " xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48"
-    style="fill:#FFFFFF;">
-    <path d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z"></path>
-    </svg>
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
                                                 </span>
                                             </button>
                                             <span>Track and Field</span>
                                         </li>
-                                        
-    
+
+
                                     </ul>
                                 </div>
+
+                            </li>
+                            <li>
+                                <div class="w-full h-[10vh]"></div>
                             </li>
 
                         </ul>
@@ -381,7 +931,7 @@
         <hr class="my-4">
         <footer-layout class="footer-layout"></footer-layout>
     </div>
-   
+
 
 </body>
 <script src="../scripts/index.js"></script>

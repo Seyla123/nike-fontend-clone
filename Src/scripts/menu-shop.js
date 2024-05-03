@@ -29,11 +29,17 @@ fetch("../components/layouts/shop/miniMenu.html")
     //filter
     const filterBtn = document.querySelector("#filterBtn");
     const downBar = document.querySelector("#downBar");
+    const cancelDownbar = document.querySelector("#cancelDownbar");
 
     filterBtn.addEventListener("click",function(){
       const contentAll = document.querySelector("#contentAll")
-      downBar.classList.remove("hidden")
-      contentAll.classList.add("fixed")
+      downBar.classList.add("bottom-0")
+      contentAll.classList.add("fixed","blur")
+    })
+    cancelDownbar.addEventListener("click",function(){
+      const contentAll = document.querySelector("#contentAll")
+      downBar.classList.remove("bottom-0")
+      contentAll.classList.remove("fixed","blur")
     })
 
   })
