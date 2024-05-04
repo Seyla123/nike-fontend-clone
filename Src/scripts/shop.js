@@ -12487,7 +12487,7 @@ function myFunction(){
     if(j>colorBg.length-1){
       j=0;
     }
-  containerShop.innerHTML +=`<a href="#${shopNike.sneakers[i]["id"]}" class="">
+  containerShop.innerHTML +=`<a href="../pages/product-detail.html" class="">
   <div class="${colorBg[j]}">
       <img class="scale-x-[-1]" src="${shopNike.sneakers[i]["main_picture_url"]}" alt="">
   </div>

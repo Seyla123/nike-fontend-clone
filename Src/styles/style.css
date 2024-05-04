@@ -277,10 +277,15 @@ body {
 .min-navbar ul li:hover {
   opacity: 0.5;
 }
-@media screen and (max-width: 1165px) {
-  .Accessories-menu {
+@media screen and (max-width: 1230px) {
+  #acc-menu-btn {
     display: none;
   }
+}
+@media screen and (max-width: 1390px){
+#sale-menu-btn{
+  display:none;
+}
 }
 
 @media screen and (max-width: 960px) {
