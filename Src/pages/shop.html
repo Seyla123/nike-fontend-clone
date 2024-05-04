@@ -16,7 +16,7 @@
     <!--  -->
 </head>
 
-<body onload="myFunction()">
+<body onload="myFunction()" class="hal-font">
     <div id="showContentToggle"
         class="hidden flex backdrop-blur-sm bg-gray-400/45 fixed z-50 w-full h-full justify-center items-center">
         <div class="bg-white w-full h-full lg:w-[30%] lg:h-[70%] lg:rounded-3xl flex flex-col justify-between p-12">
@@ -569,7 +569,7 @@
 
                                 </ul>
                             </li>
-                            <li>
+                            <li class="divide-y">
                                 <div class="flex flex-col py-4">
                                     <button class="btn w-full flex items-center justify-between">
                                         <p>Sale & Offers</p>
@@ -578,7 +578,7 @@
                                         </span>
                                     </button>
                                     <ul
-                                        class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
+                                        class="dropdown h-0 overflow-hidden duration-500 pointer-events-none  flex flex-col justify-center">
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
                                             <button class=" w-8 h-5 border border-gray-400 rounded relative">
                                                 <span
@@ -637,7 +637,7 @@
                                         </span>
                                     </button>
                                     <ul
-                                        class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
+                                        class="dropdown opacity-0 overflow-hidden duration-500 pointer-events-none h-0  flex flex-col justify-center">
 
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
                                             <button class=" w-5 h-5 border border-gray-400 rounded relative">
@@ -682,64 +682,64 @@
                                         </span>
                                     </button>
                                     <ul
-                                        class="dropdown opacity-0 h-0  duration-700 pointer-events-none  text-xs  flex flex-col justify-center">
+                                        class="dropdown opacity-0 h-0 overflow-hidden  duration-500 pointer-events-none  text-xs  grid grid-cols-3 ">
 
-                                        <li class="flex items-center justify-between ">
-                                            <div>
+                                        
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-black size-7 rounded-full"></div>
                                                 <span>Black</span>
                                             </div>
-                                            <div>
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-[#1790C8] size-7 rounded-full"></div>
                                                 <span>Blue</span>
                                             </div>
-                                            <div>
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-[#825D41] size-7 rounded-full"></div>
                                                 <span>Brown</span>
                                             </div>
-                                        </li>
-                                        <li class="flex items-center justify-between p-4">
-                                            <div>
+                                        
+                                        
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-[#7BBA3C] size-7 rounded-full"></div>
                                                 <span>Green</span>
                                             </div>
-                                            <div>
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-[#808080] size-7 rounded-full"></div>
                                                 <span>Gray</span>
                                             </div>
-                                            <div>
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-black size-7 rounded-full"></div>
                                                 <span>Black</span>
                                             </div>
-                                        </li>
-                                        <li class="flex items-center justify-between p-4">
-                                            <div>
+                                        
+                                        
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-[#F36B26] size-7 rounded-full"></div>
                                                 <span>Orange</span>
                                             </div>
-                                            <div>
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-[#F0728F] size-7 rounded-full"></div>
                                                 <span>Pink</span>
                                             </div>
-                                            <div>
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-[#8D429F] size-7 rounded-full"></div>
                                                 <span>Purple</span>
                                             </div>
-                                        </li>
-                                        <li class="flex items-center justify-between p-4">
-                                            <div>
+                                        
+                                        
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-[#E7352B] size-7 rounded-full"></div>
                                                 <span>Red</span>
                                             </div>
-                                            <div>
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-white border  size-7 rounded-full"></div>
                                                 <span>White</span>
                                             </div>
-                                            <div>
+                                            <div class="flex flex-col justify-center items-center">
                                                 <div class="bg-[#FED533] size-7 rounded-full"></div>
                                                 <span>Yellow</span>
                                             </div>
-                                        </li>
+                                        
 
 
 
@@ -747,6 +747,7 @@
 
                                     </ul>
                                 </div>
+                                
                                 <div class="flex flex-col py-4">
                                     <button class="btn w-full flex items-center justify-between">
                                         <p>Shop by Price</p>
@@ -755,7 +756,7 @@
                                         </span>
                                     </button>
                                     <ul
-                                        class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
+                                        class="dropdown overflow-hidden opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
                                             <button class=" w-5 h-5 border border-gray-400 rounded relative">
                                                 <span
@@ -805,7 +806,6 @@
 
 
 
-
                                     </ul>
                                 </div>
                                 <div class="flex flex-col py-4">
@@ -816,7 +816,7 @@
                                         </span>
                                     </button>
                                     <ul
-                                        class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
+                                        class="dropdown overflow-hidden opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
                                             <button class=" w-5 h-5 border border-gray-400 rounded relative">
                                                 <span
@@ -832,13 +832,57 @@
                                             </button>
                                             <span>Nike Soprtswear</span>
                                         </li>
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Jordan</span>
+                                        </li>
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Converse</span>
+                                        </li>
+                                        <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
+                                            <button class=" w-5 h-5 border border-gray-400 rounded relative">
+                                                <span
+                                                    class="w-full spanCheck h-full bg-black absolute top-0 left-0 opacity-0 pointer-events-none duration-700">
+                                                    <svg class="size-4 left-[1px] absolute z-40 "
+                                                        xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100"
+                                                        height="100" viewBox="0 0 48 48" style="fill:#FFFFFF;">
+                                                        <path
+                                                            d="M 42.960938 8.9804688 A 2.0002 2.0002 0 0 0 41.585938 9.5859375 L 17 34.171875 L 6.4140625 23.585938 A 2.0002 2.0002 0 1 0 3.5859375 26.414062 L 15.585938 38.414062 A 2.0002 2.0002 0 0 0 18.414062 38.414062 L 44.414062 12.414062 A 2.0002 2.0002 0 0 0 42.960938 8.9804688 z">
+                                                        </path>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <span>Nike By You</span>
+                                        </li>
 
 
 
 
                                     </ul>
                                 </div>
-
                                 <div class="flex flex-col py-4">
                                     <button class="btn w-full flex items-center justify-between">
                                         <p>Sport and Activities</p>
@@ -847,7 +891,7 @@
                                         </span>
                                     </button>
                                     <ul
-                                        class="dropdown opacity-0 duration-700 pointer-events-none h-0  flex flex-col justify-center">
+                                        class="dropdown opacity-0 duration-500 overflow-hidden pointer-events-none h-0  flex flex-col justify-center">
                                         <li class="flex gap-2 checkBtn cursor-pointer hover:text-gray-500">
                                             <button class=" w-5 h-5 border border-gray-400 rounded relative">
                                                 <span
