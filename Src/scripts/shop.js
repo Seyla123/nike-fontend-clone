@@ -12481,7 +12481,7 @@ function myFunction(){
   sidebarCategory.classList.add("w-80")
 }
   const containerShop = document.querySelector("#containerShop");
-  const colorBg = ["bg-gray-300","bg-[#F5F5F5]","bg-[#F6F5F2]","bg-[#F0EBE3]"]
+  const colorBg = ["bg-[#FEFAF6]","bg-[#F5F5F5]","bg-[#F6F5F2]"]
   j=0;
   for (i=0; i<shopNike.sneakers.length;i++){
     if(j>colorBg.length-1){
@@ -12560,7 +12560,7 @@ fetch("../components/layouts/shop/shop-menu-section.html")
 const button = document.querySelectorAll(".btn");
 const dropDown = document.querySelectorAll(".dropdown");
 const arrowRotate = document.querySelectorAll(".btn span");
-const hOf = ["h-32","h-24","h-80","h-24","h-8","h-32","h-32"]
+const hOf = ["h-32","h-16","h-80","h-24","h-24","h-32","h-32"]
 function sidebarCategoryDropdown(btn,dropdown,arrow,list){
   let isActicve=false
   for(let k = 0;k<button.length;k++){
