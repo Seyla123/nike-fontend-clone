@@ -15,8 +15,19 @@ function back_(element, btn) {
     });
   });
 }
-// function block
-
+/// function
+function clickDropdownMiniMenu(menu,dropdown,height){
+  let isActive = false;
+  menu.addEventListener('click', (event)=>{
+    isActive = !isActive;
+    if(isActive){
+      dropdown.classList.add(height)
+    }
+    else{
+      dropdown.classList.remove(height)
+    }
+  })
+}
 
 // Header
 const header = document.querySelector(".header-layout");
@@ -24,6 +35,8 @@ fetch("../components/layouts/header.html")
   .then((res) => res.text())
   .then((data) => {
     header.innerHTML = data;
+
+
     const helpBtn = document.querySelector("#helpBtn");
     const helpDropdown = document.querySelector("#helpDropdown");
     helpBtn.addEventListener("mouseover", function () {
@@ -40,8 +53,11 @@ fetch("../components/layouts/header.html")
     })
     helpDropdown.addEventListener("mouseout", function () {
       helpDropdown.classList.add("opacity-0",)
-      helpDropdown.classList.remove("top-10","pointer-events-none")
+      helpDropdown.classList.add("top-10","pointer-events-none")
     })
+
+
+
   })
   .catch((error) => console.error("Error fetching included file:", error));
 ////////
@@ -52,30 +68,39 @@ fetch("../components/layouts/navbar.html")
   .then((res) => res.text())
   .then((data) => {
     nav.innerHTML = data;
+
+
     // dropdown-1
     var btn2 = document.querySelector(".new-featured-menu");
     var dropdowm_1 = document.getElementById("dropdown-1");
     let below_dropdown_1 = document.getElementById("below-dropdown-1");
+    
     btn2.addEventListener("mouseover", function () {
       below_dropdown_1.classList.remove("pointer-events-none");
       dropdowm_1.classList.add("h-[400px]");
+      below_dropdown_1.classList.add("delay-300");
       below_dropdown_1.classList.add("opacity-100");
     });
     dropdowm_1.addEventListener("mouseover", function () {
       below_dropdown_1.classList.remove("pointer-events-none");
+      below_dropdown_1.classList.remove("delay-300");
       dropdowm_1.classList.add("h-[400px]");
       below_dropdown_1.classList.add("opacity-100");
     });
     btn2.addEventListener("mouseout", function () {
       dropdowm_1.classList.remove("h-[400px]");
+      below_dropdown_1.classList.remove("delay-300");
       below_dropdown_1.classList.remove("opacity-100");
       below_dropdown_1.classList.add("pointer-events-none");
     });
     dropdowm_1.addEventListener("mouseout", function () {
       dropdowm_1.classList.remove("h-[400px]");
+      below_dropdown_1.classList.remove("delay-300");
       below_dropdown_1.classList.remove("opacity-100");
       below_dropdown_1.classList.add("pointer-events-none");
     });
+
+
 
     const menDropdown = {
       "New Styles Added": ["Sale Up to 50% Off"],
@@ -384,20 +409,24 @@ fetch("../components/layouts/navbar.html")
       btnDropdown.addEventListener("mouseover", function () {
         meBelowdropdown.classList.remove("pointer-events-none");
         menContainer.classList.add(h);
+        meBelowdropdown.classList.add("delay-300");
         meBelowdropdown.classList.add("opacity-100");
       });
       menContainer.addEventListener("mouseover", function () {
         meBelowdropdown.classList.remove("pointer-events-none");
         menContainer.classList.add(h);
+        meBelowdropdown.classList.add("delay-300");
         meBelowdropdown.classList.add("opacity-100");
       });
       btnDropdown.addEventListener("mouseout", function () {
         menContainer.classList.remove(h);
+        meBelowdropdown.classList.remove("delay-300");
         meBelowdropdown.classList.remove("opacity-100");
         meBelowdropdown.classList.add("pointer-events-none");
       });
       menContainer.addEventListener("mouseout", function () {
         menContainer.classList.remove(h);
+        meBelowdropdown.classList.remove("delay-300");
         meBelowdropdown.classList.remove("opacity-100");
         meBelowdropdown.classList.add("pointer-events-none");
       });
@@ -546,6 +575,26 @@ fetch("../components/layouts/menu-section.html")
         menu_below_hover.style.height = "14.5vh";
       });
     }
+
+  //mini Menu Feature
+    const minifeaturedMenu = document.querySelector("#featuredMiniMenu");
+    const dropdownfeaturedMiniMenu = document.querySelector("#featuredMiniMenu ul")
+    clickDropdownMiniMenu(minifeaturedMenu,dropdownfeaturedMiniMenu,"h-[200px]")
+//mini Shoe Feature
+    const miniShoeMenu = document.querySelector("#ShoeMiniMenu");
+    const dropdownShoeMiniMenu = document.querySelector("#ShoeMiniMenu ul")
+    clickDropdownMiniMenu(miniShoeMenu,dropdownShoeMiniMenu,"h-[200px]")
+  //mini Clothing Feature
+  const miniClothingMenu = document.querySelector("#ClothingMiniMenu");
+  const dropdownClothingMiniMenu = document.querySelector("#ClothingMiniMenu ul")
+  clickDropdownMiniMenu(miniClothingMenu,dropdownClothingMiniMenu,"h-[370px]")
+    //mini Clothing Feature
+    const miniKidsMiniMenu = document.querySelector("#KidsMiniMenu");
+    const dropdownKidsMiniMenu = document.querySelector("#KidsMiniMenu ul")
+    clickDropdownMiniMenu(miniKidsMiniMenu,dropdownKidsMiniMenu,"h-[250px]")
+//200px 200px 370px 250px
+    
+
   })
   .catch((error) => console.error("Error fetching included file:", error));
 //footer.html
@@ -554,5 +603,18 @@ fetch("../components/layouts/footer.html")
   .then((res) => res.text())
   .then((data) => {
     footer.innerHTML = data;
+    //200px 150px 120px 
+    const miniHelpFooter = document.querySelector("#miniHelpFooter")
+    const dropdownMiniHelpFooter = document.querySelector("#dropdownMiniHelpFooter")
+    clickDropdownMiniMenu(miniHelpFooter,dropdownMiniHelpFooter,"h-[200px]")
+
+    const miniCompanyFooter = document.querySelector("#miniCompanyFooter")
+    const dropdownMiniCompanyFooter = document.querySelector("#dropdownMiniCompanyFooter")
+    clickDropdownMiniMenu(miniCompanyFooter,dropdownMiniCompanyFooter,"h-[150px]")
+
+    const miniPromoteFooter = document.querySelector("#miniPromoteFooter")
+    const dropdownMiniPromoteFooter = document.querySelector("#dropdownMiniPromoteFooter")
+    clickDropdownMiniMenu(miniPromoteFooter,dropdownMiniPromoteFooter,"h-[120px]")
+    
   })
   .catch((error) => console.error("Error fetching included file:", error));

@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.hal-font { 
+	font-family: "Helvetica Now Text Medium",Helvetica,Arial,sans-serif; 
+}
+.nike-font { 
+	font-family: Arial Narrow,Arial,sans-serif; 
+}
 @layer utilities {
   /* Hide scrollbar for Chrome, Safari and Opera */
   .no-scrollbar::-webkit-scrollbar {
@@ -270,10 +277,15 @@ body {
 .min-navbar ul li:hover {
   opacity: 0.5;
 }
-@media screen and (max-width: 1165px) {
-  .Accessories-menu {
+@media screen and (max-width: 1230px) {
+  #acc-menu-btn {
     display: none;
   }
+}
+@media screen and (max-width: 1390px){
+#sale-menu-btn{
+  display:none;
+}
 }
 
 @media screen and (max-width: 960px) {
