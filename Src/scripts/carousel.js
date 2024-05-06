@@ -66,28 +66,7 @@ class CarouselComponent extends HTMLElement {
 customElements.define('carousel-component', CarouselComponent);
 
 
-var glide01 = new Glide('.glide-01', {
-   type: 'carousel',
-   focusAt: 'center',
-   perView: 4,
-   animationDuration: 700,
-   gap: 20,
-   classes: {
-      activeNav: '[&>*]:bg-slate-700',
-   },
-   breakpoints: {
-      1024: {
-         perView: 4,
-      },
-      640: {
-         perView: 3,
-      },
-   },
-});
-
-glide01.mount();
-
-// var glide02 = new Glide('.glide-02', {
+// var glide01 = new Glide('.glide-01', {
 //    type: 'carousel',
 //    focusAt: 'center',
 //    perView: 4,
@@ -106,26 +85,5 @@ glide01.mount();
 //    },
 // });
 
-// glide02.mount();
-
-// var glide03 = new Glide('.glide-03', {
-//     type: 'carousel',
-//     focusAt: 'center',
-//     perView: 4,
-//     animationDuration: 700,
-//     gap: 20,
-//     classes: {
-//        activeNav: '[&>*]:bg-slate-700',
-//     },
-//     breakpoints: {
-//        1024: {
-//           perView: 4,
-//        },
-//        640: {
-//           perView: 3,
-//        },
-//     },
-//  });
- 
-//  glide03.mount();
+// glide01.mount();
 
