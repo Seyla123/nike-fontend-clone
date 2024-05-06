@@ -21,7 +21,19 @@
     <section id="section" class="max-w-[1800px] mx-auto " >
       <trending-section-layout class="trending-section-layout"></trending-section-layout>
       <featured-section-layout class="featured-section-layout"></featured-section-layout>
-      <carousel-classic-layout class="carousel-classic-layout"></carousel-classic-layout>
+      <!-- <carousel-classic-layout class="carousel-classic-layout"></carousel-classic-layout> -->
+      <!-- <loop-carousel-component 
+      title="Featured"
+      class="glide-01"
+			imgUrl='["../Images/classic-1.jpg", "../Images/classic-1.jpg", "../Images/classic-1.jpg", "../Images/classic-1.jpg","../Images/classic-1.jpg","../Images/classic-1.jpg"]'
+      ></loop-carousel-component> -->
+      <carousel-component
+      title="Featured"
+      class="glide-01"
+			imgUrl='["../Images/classic-1.jpg", "../Images/classic-2.jpg", "../Images/classic-3.jpg", "../Images/classic-4.jpg","../Images/classic-5.jpg"]'
+      >
+
+      </carousel-component>
       <spot-section-layout class="spot-section-layout"></spot-section-layout>
       <carousel-popular-layout class="carousel-popular-layout"></carousel-popular-layout>
       <member-section-layout class="member-section-layout"></member-section-layout>
@@ -129,5 +141,8 @@
 </body>
 
 <script src="../scripts/index.js">
+
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+<script  src="../scripts/component.js"></script>
 </html>
