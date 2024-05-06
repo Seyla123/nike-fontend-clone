@@ -12622,7 +12622,7 @@ function sidebarCategoryDropdown(btn,dropdown,arrow,list){
   const toggleBtn = document.querySelector("#toggleBtn");
   const cancelToggleBtn = document.querySelector("#cancelToggleBtn");
   const showContentToggle = document.querySelector("#showContentToggle")
-    const contentAll = document.querySelector("#contentAll")
+  const contentAll = document.querySelector(".contentAll")
 
   toggleBtn.addEventListener("click", function(){
     if(isActicve){

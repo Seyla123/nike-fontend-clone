@@ -437,10 +437,17 @@ fetch("../components/layouts/navbar.html")
     var sidebar_section = document.querySelector("#sidebar");
     var min_menu_btn = document.querySelector("#min-menu-btn");
     let all_except_sidebar = document.querySelector("#all-except-sidebar");
+    const closeBtn = document.querySelector("#close-btn");
 
     min_menu_btn.addEventListener("click", function () {
-      all_except_sidebar.style.position = "fixed";
+      document.body.classList.add("overflow-hidden")
+      all_except_sidebar.classList.add("blur-sm");
       sidebar_section.style.right = "0%";
+    });
+    closeBtn.addEventListener("click", function () {
+      document.body.classList.remove("overflow-hidden")
+      all_except_sidebar.classList.remove("blur-sm");
+      sidebar_section.style.right = "-100%";
     });
 
     document.dispatchEvent(new Event("headerComponentLoaded"));
