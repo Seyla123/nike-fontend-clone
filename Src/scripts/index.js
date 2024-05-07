@@ -74,30 +74,37 @@ fetch("../components/layouts/navbar.html")
     var btn2 = document.querySelector(".new-featured-menu");
     var dropdowm_1 = document.getElementById("dropdown-1");
     let below_dropdown_1 = document.getElementById("below-dropdown-1");
+    const navbarTop = document.querySelector("#navbar")
     
     btn2.addEventListener("mouseover", function () {
       below_dropdown_1.classList.remove("pointer-events-none");
       dropdowm_1.classList.add("h-[400px]");
       below_dropdown_1.classList.add("delay-300");
       below_dropdown_1.classList.add("opacity-100");
+      navbarTop.classList.add("sticky")
     });
     dropdowm_1.addEventListener("mouseover", function () {
       below_dropdown_1.classList.remove("pointer-events-none");
       below_dropdown_1.classList.remove("delay-300");
       dropdowm_1.classList.add("h-[400px]");
       below_dropdown_1.classList.add("opacity-100");
+      navbarTop.classList.add("sticky");
     });
     btn2.addEventListener("mouseout", function () {
       dropdowm_1.classList.remove("h-[400px]");
       below_dropdown_1.classList.remove("delay-300");
       below_dropdown_1.classList.remove("opacity-100");
       below_dropdown_1.classList.add("pointer-events-none");
+      navbarTop.classList.remove("sticky")
+
     });
     dropdowm_1.addEventListener("mouseout", function () {
       dropdowm_1.classList.remove("h-[400px]");
       below_dropdown_1.classList.remove("delay-300");
       below_dropdown_1.classList.remove("opacity-100");
       below_dropdown_1.classList.add("pointer-events-none");
+      navbarTop.classList.remove("sticky")
+
     });
 
 
@@ -411,24 +418,28 @@ fetch("../components/layouts/navbar.html")
         menContainer.classList.add(h);
         meBelowdropdown.classList.add("delay-300");
         meBelowdropdown.classList.add("opacity-100");
+        navbarTop.classList.add("sticky")
       });
       menContainer.addEventListener("mouseover", function () {
         meBelowdropdown.classList.remove("pointer-events-none");
         menContainer.classList.add(h);
         meBelowdropdown.classList.add("delay-300");
         meBelowdropdown.classList.add("opacity-100");
+        navbarTop.classList.add("sticky")
       });
       btnDropdown.addEventListener("mouseout", function () {
         menContainer.classList.remove(h);
         meBelowdropdown.classList.remove("delay-300");
         meBelowdropdown.classList.remove("opacity-100");
         meBelowdropdown.classList.add("pointer-events-none");
+        navbarTop.classList.remove("sticky")
       });
       menContainer.addEventListener("mouseout", function () {
         menContainer.classList.remove(h);
         meBelowdropdown.classList.remove("delay-300");
         meBelowdropdown.classList.remove("opacity-100");
         meBelowdropdown.classList.add("pointer-events-none");
+        navbarTop.classList.remove("sticky")
       });
     }
 
