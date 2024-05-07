@@ -83,7 +83,7 @@ fetch("../components/layouts/navbar.html")
       below_dropdown_1.classList.add("delay-300");
       below_dropdown_1.classList.add("opacity-100");
       navbarTop.classList.add("sticky")
-      blurBg.classList.add("backdrop-blur-sm", "bg-white/30")
+      blurBg.classList.add("backdrop-blur-sm", "bg-white/10")
     });
     dropdowm_1.addEventListener("mouseover", function () {
       below_dropdown_1.classList.remove("pointer-events-none");
@@ -91,7 +91,7 @@ fetch("../components/layouts/navbar.html")
       dropdowm_1.classList.add("h-[400px]");
       below_dropdown_1.classList.add("opacity-100");
       navbarTop.classList.add("sticky");
-      blurBg.classList.add("backdrop-blur-sm", "bg-white/30")
+      blurBg.classList.add("backdrop-blur-sm", "bg-white/10")
 
     });
     btn2.addEventListener("mouseout", function () {
@@ -100,7 +100,7 @@ fetch("../components/layouts/navbar.html")
       below_dropdown_1.classList.remove("opacity-100");
       below_dropdown_1.classList.add("pointer-events-none");
       navbarTop.classList.remove("sticky")
-      blurBg.classList.remove("backdrop-blur-sm", "bg-white/30")
+      blurBg.classList.remove("backdrop-blur-sm", "bg-white/10")
 
 
     });
@@ -110,7 +110,7 @@ fetch("../components/layouts/navbar.html")
       below_dropdown_1.classList.remove("opacity-100");
       below_dropdown_1.classList.add("pointer-events-none");
       navbarTop.classList.remove("sticky")
-      blurBg.classList.remove("backdrop-blur-sm", "bg-white/30")
+      blurBg.classList.remove("backdrop-blur-sm", "bg-white/10")
 
 
     });
@@ -427,7 +427,7 @@ fetch("../components/layouts/navbar.html")
         meBelowdropdown.classList.add("delay-300");
         meBelowdropdown.classList.add("opacity-100");
         navbarTop.classList.add("sticky")
-        blurBg.classList.add("backdrop-blur-sm", "bg-white/30")
+        blurBg.classList.add("backdrop-blur-sm", "bg-white/10")
       });
       menContainer.addEventListener("mouseover", function () {
         meBelowdropdown.classList.remove("pointer-events-none");
@@ -435,7 +435,7 @@ fetch("../components/layouts/navbar.html")
         meBelowdropdown.classList.add("delay-300");
         meBelowdropdown.classList.add("opacity-100");
         navbarTop.classList.add("sticky")
-        blurBg.classList.add("backdrop-blur-sm", "bg-white/30")
+        blurBg.classList.add("backdrop-blur-sm", "bg-white/10")
       });
       btnDropdown.addEventListener("mouseout", function () {
         menContainer.classList.remove(h);
@@ -443,7 +443,7 @@ fetch("../components/layouts/navbar.html")
         meBelowdropdown.classList.remove("opacity-100");
         meBelowdropdown.classList.add("pointer-events-none");
         navbarTop.classList.remove("sticky")
-        blurBg.classList.remove("backdrop-blur-sm", "bg-white/30")
+        blurBg.classList.remove("backdrop-blur-sm", "bg-white/10")
       });
       menContainer.addEventListener("mouseout", function () {
         menContainer.classList.remove(h);
@@ -451,7 +451,7 @@ fetch("../components/layouts/navbar.html")
         meBelowdropdown.classList.remove("opacity-100");
         meBelowdropdown.classList.add("pointer-events-none");
         navbarTop.classList.remove("sticky")
-        blurBg.classList.remove("backdrop-blur-sm", "bg-white/30")
+        blurBg.classList.remove("backdrop-blur-sm", "bg-white/10")
       });
     }
 
