@@ -24,10 +24,10 @@
     <navbar-layout class="navbar-layout"></navbar-layout>
     <promotion-section class="promotion-section"></promotion-section>
 
-    <div class="max-w-[1800px] w-full h-full mx-auto pr-4 pl-4">
+    <div class="max-w-[1800px] w-full h-full mx-auto lg:px-4">
       <div class="bg w-full flex max-w-[1200px] mx-auto pt-10">
         <!-- left side pic -->
-        <div class="w-full flex justify-center relative ">
+        <div class="w-full hidden lg:flex justify-center relative ">
             <div class=" sticky top-10 w-full max-h-[670px] gap-3 flex flex-nowrap ">
               <!-- sub pic -->
                 <div class=" flex gap-2 flex-col  overflow-hidden picSmall">
@@ -60,7 +60,7 @@
                 </div>
                 <!-- main pic -->
                   <div class=" ">
-                    <img class="w-full relative rounded-lg" id="mainImg" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/03382ef9-d924-467c-acb5-c84d38bf2da7/air-jordan-1-mid-se-craft-mens-shoes-5VjD18.png" alt="">
+                    <img class="w-full relative rounded-lg " id="mainImg" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/03382ef9-d924-467c-acb5-c84d38bf2da7/air-jordan-1-mid-se-craft-mens-shoes-5VjD18.png" alt="">
                     <!-- <button class="absolute size-12 bottom-14 right-24 flex justify-center items-center rounded-full bg-white">
                       <img class="max-w-4" src="../Images/back.png" alt="">
                     </button>
@@ -73,13 +73,16 @@
         </div>
         <!-- right side -->
         <div class=" w-full  ">
-            <div class="max-w-[456px] mx-auto pl-4 space-y-2">
-                <div>
+            <div class="lg:max-w-[456px] mx-auto lg:pl-4 space-y-2">
+                <div class="pl-4 lg:pl-4">
                   <h1 class="text-2xl">Air Jordan 1 Mid SE Craft</h1>
                   <p>Men's Shoes</p>
                   <p class="py-4">$135</p>
                 </div>
-                <div class="flex space-x-1">
+                <div class="lg:hidden flex">
+                  <img class="w-full relative" id="mainImg" src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/03382ef9-d924-467c-acb5-c84d38bf2da7/air-jordan-1-mid-se-craft-mens-shoes-5VjD18.png" alt="">
+                </div>
+                <div class="flex space-x-1 pl-4 lg:pl-4">
                   <button >
                     <img class="max-w-16 rounded-lg border border-black" src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/8abc822d-3142-449f-bb12-d5ce0fa0fd6a/air-jordan-1-mid-se-craft-mens-shoes-5VjD18.png" alt="">
                   </button>
@@ -90,7 +93,7 @@
                     <img class="max-w-16 rounded-lg" src="https://static.nike.com/a/images/t_PDP_144_v1/f_auto,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/1aaf4592-f6b3-47f8-8d0d-2a58ca7e2073/air-jordan-1-mid-se-craft-mens-shoes-5VjD18.png" alt="">
                   </button>
                 </div>
-                <div class=" pt-8 flex flex-col gap-2">
+                <div class="px-4 lg:px-4 pt-8 flex flex-col gap-2">
                   <div class="flex justify-between">
                     <span>Select Size</span>
                     <span class="text-gray-500">Size Guide</span>
@@ -171,7 +174,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="flex flex-col gap-4">
+                <div class="px-4 lg:px-4 flex flex-col gap-4">
                   <span class="flex flex-col justify-center items-center flex-nowrap">
                     <p>4 interest-free payments of $31.25 with </p>
                     <span><strong>Klarna</strong>. <a href="#" class="underline">Learn More</a></span>  
@@ -186,7 +189,7 @@
                     </span>
                   </button>
                 </div>
-                <div class="flex flex-col gap-4 py-8">
+                <div class="px-4 lg:px-4 flex flex-col gap-4 py-8">
                   <span>
                     <strong>Shipping</strong>
                     <p>You'll see our shipping options at checkout</p>
@@ -368,14 +371,14 @@
         </div>
       </div>
 
-      <div class="space-y-2 pb-8 ">
+      <div class="space-y-2 pb-8 pl-4 lg:pl-4">
         <h1 class="text-2xl">How Others Are Wearing It</h1>
         <p>
           Upload your photo or mention @Nike on Instagram for a chance to be featured.
       </p>
       <button class="border-2 rounded-full px-4 py-1">Upload Your Photo</button>
       </div>
-      <div class="shopCarousel-layout"></div>
+      <div class="shopCarousel-layout pl-4 lg:pl-4"></div>
     </div>
    
     
