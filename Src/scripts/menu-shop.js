@@ -6,7 +6,7 @@ fetch("../components/layouts/shop/miniMenu.html")
     const toggleBtnMini = document.querySelector("#toggleBtnMini");
     const cancelToggleBtnMini = document.querySelector("#cancelToggleBtn");
     const showContentToggleMini = document.querySelector("#showContentToggle");
-    const contentAllMini = document.querySelector("#contentAll");
+    const contentAllMini = document.querySelector(".contentAll");
     let isGood = false;
     toggleBtnMini.addEventListener("click", function () {
       if (isGood) {
@@ -32,12 +32,12 @@ fetch("../components/layouts/shop/miniMenu.html")
     const cancelDownbar = document.querySelector("#cancelDownbar");
 
     filterBtn.addEventListener("click",function(){
-      const contentAll = document.querySelector("#contentAll")
+      const contentAll = document.querySelector(".contentAll")
       downBar.classList.add("bottom-0")
       contentAll.classList.add("fixed","blur")
     })
     cancelDownbar.addEventListener("click",function(){
-      const contentAll = document.querySelector("#contentAll")
+      const contentAll = document.querySelector(".contentAll")
       downBar.classList.remove("bottom-0")
       contentAll.classList.remove("fixed","blur")
     })
