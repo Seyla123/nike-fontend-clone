@@ -1,6 +1,4 @@
 
-
-
 const createCarousel = (title, imgUrlArray, glide) => {
 	return `
     <div class="relative mt-10">
@@ -58,7 +56,6 @@ class CarouselComponent extends HTMLElement {
 		const glide = this.getAttribute('glide');
 		// Parse the imgUrl attribute as an array
 		const imgUrlArray = JSON.parse(this.getAttribute('imgUrl'));
-
 		this.innerHTML = createCarousel(title, imgUrlArray, glide);
 	}
 }
