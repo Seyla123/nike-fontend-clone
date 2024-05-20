@@ -89,6 +89,7 @@ const shoeArr = [{
   img: "../../Images/classic-5.jpg",
 },
 ]
+
 import {createCarouselArr} from  '../../scripts/components/carousel.js'
 import { createFeatureComponent } from '../../scripts/components/featureComponent.js'
 import { createClassicCarousel } from '../../scripts/components/carouselClassic.js'

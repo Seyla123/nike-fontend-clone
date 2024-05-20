@@ -151,13 +151,13 @@ const createNavbar = () => {
         <a
           id="men-menu-btn"
           class="new-featured-menu px-2 py-4 hover:opacity-50"
-          href="./men.html"
+          href="../../pages/men/index.html"
           ><li class="">Men</li></a
         >
         <a
           id="women-menu-btn"
           class="new-featured-menu px-2 py-4 hover:opacity-50"
-          href="./women.html"
+          href="../../pages/women/index.html"
           ><li class="">Women</li></a
         >
         <a id="kid-menu-btn" class="new-featured-menu px-2 py-4 hover:opacity-50" href="./kid.html"
@@ -457,7 +457,7 @@ const createNavbar = () => {
 <div id="blurBg" class="z-40 duration-700 pointer-events-none fixed w-full h-full">
 
 </div>
-<side-bar-component></side-bar-component>
+
     `
 }
 

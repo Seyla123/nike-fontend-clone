@@ -1,10 +1,8 @@
-import './carouselMemberShip.js'
-import './carouselClassic.js'
 import './header.js';
 import './navbar.js';
 import './footer.js';
-import './featureComponent.js';
 import './promotionBar.js';
-import './carouselPopular.js'
 import './subNavbar.js'
-import './carouselSpotlight.js'
+import '../../scripts/components/carouselPopular.js';
+import '../../scripts/components/carouselMemberShip.js';
+

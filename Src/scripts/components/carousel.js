@@ -17,7 +17,7 @@ const createCarousel = (title,arr,typeCarousel=false) => {
 </div>
 
 <div id="container"
-  class="flex flex-no-wrap gap-2 overflow-x-scroll scrolling-touch items-start mb-8 p-4">
+  class="flex flex-no-wrap gap-2 overflow-x-scroll scrolling-touch items-start mb-8 mx-4">
 
   ${arr.map((item)=>{
     return `

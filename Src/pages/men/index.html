@@ -20,14 +20,14 @@
     <!--  -->
 </head>
 <body>
-    <section id="all-except-sidebar" class="duration-1000">
+    <div id="all-except-sidebar" class="duration-1000">
         <header-component></header-component>
         <navbar-component></navbar-component>
         <promotion-component></promotion-component>
         <sub-navbar-component></sub-navbar-component>
-        <div class="w-full max-w-[1800px] mx-auto pr-4 pl-4 ">
+        <div class="w-full max-w-[1800px] mx-auto">
             <!-- hero section -->
-            <div class=" w-full mb-8 ">
+            <div class=" w-full mb-8 px-4">
                 <div class="flex items-end">
                     <img class="w-full hidden sm:block" src="../../Images/men/men-s-shoes-clothing-accessories.png" alt="">
                     <img class="w-full sm:hidden" src="../../Images/men/min-hero-section-men.png" alt="">
@@ -84,13 +84,12 @@
         <section id="section" class="max-w-[1800px] mx-auto" >
             <classic-carousel></classic-carousel>
             <brooks-component></brooks-component>
-            <popular-carousel></popular-carousel>
+            <popular-carousel-component></popular-carousel-component>
             <member-ship-carousel></member-ship-carousel>
             <footer-component></footer-component>
-
         </section>
-        <!--  -->
-    </section>
+    </div>
+    <side-bar-component></side-bar-component>
 </body>
 <!-- script link -->
 <script type="module" src="./index.js"></script>

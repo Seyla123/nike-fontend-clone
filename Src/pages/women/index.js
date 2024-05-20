@@ -33,6 +33,7 @@ const trendingContent = [{
     description: "New Fitness Essentials",
 
 },]
+import '../../scripts/components/carouselSpotlight.js'
 
 import { createFeatureComponent } from "../../scripts/components/featureComponent.js"
 import { createCarouselArr } from "../../scripts/components/carousel.js"

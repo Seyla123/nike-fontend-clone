@@ -1,8 +1,7 @@
-
 const createCarouselClassic = (arr)=>{
     return `
-    <div id="default-carousel mt-4 " data-carousel="slide" class="w-full  relative">
-    <h2 class="p-4 text-3xl font-medium flex items-center relative z-0 ">
+    <div id="default-carousel mt-4 " data-carousel="slide" class="w-full px-4 relative">
+    <h2 class="py-4 text-3xl font-medium flex items-center relative z-0 ">
         Classic Spotlight
       </h2>
     <div id="container"  class="relative w-full flex flex-nowrap gap-4 flex-none overflow-x-auto no-scrollbar">
