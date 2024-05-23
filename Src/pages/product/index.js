@@ -1,7 +1,7 @@
 document.body.addEventListener('onload', myFunction());
 function myFunction() {
     const sidebarCategory = document.querySelector("#sideCategory");
-    sidebarCategory.classList.add("w-80")
+    sidebarCategory.classList.add("w-80", "mr-8")
 }
 
 const showHideBtn = document.querySelector("#showHideBtn");
@@ -11,12 +11,12 @@ let isActicve = false;
 showHideBtn.addEventListener("click", function () {
     if (isActicve == false) {
         isActicve = true
-        sidebarCategory.classList.remove("w-80")
+        sidebarCategory.classList.remove("w-80","mr-8")
         pshowHideBtn.innerHTML = "Show Filters"
     }
     else {
         isActicve = false
-        sidebarCategory.classList.add("w-80")
+        sidebarCategory.classList.add("w-80","mr-8")
         pshowHideBtn.innerHTML = "Hide Filters"
 
     }
