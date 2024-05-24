@@ -73,7 +73,6 @@ class MiniMenu extends HTMLElement {
     }
     connectedCallback() {
         this.innerHTML = createMiniMenu();
-        this.setUpEventListener()
 
     }
 }

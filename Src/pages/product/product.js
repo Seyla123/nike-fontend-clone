@@ -1,14 +1,14 @@
 const createProduct =(id,mainImg,productName,type,color,price)=>{
     return `
-    <a href="../../pages/product-detail.html?${id}" class="">
+    <a href="../../pages/product-detail/index.html?${id}" class="">
   <div class="">
-      <img  src="${mainImg}" alt="">
+      <img class="" src="${mainImg}" alt="">
   </div>
   <div class="py-2 flex flex-col gap-1">
       <p class="text-red-800">Just In</p>
       <p class="font-medium">${productName}</p>
       <p class="text-gray-400">${type}</p>
-      <p class="text-gray-400">${color}/p>
+      <p class="text-gray-400">${color}</p>
       <p class="font-medium">$${price}</p>
   </div>
 </a>
