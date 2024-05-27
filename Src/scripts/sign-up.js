@@ -66,7 +66,7 @@ const labelShoppingRequired = document.querySelector("#labelShoppingRequired");
 const selectShopping = document.querySelector("#shopping");
 required(selectShopping,labelShopping,labelShoppingRequired);
 selectShopping.addEventListener("click",(event)=>{
-  console.log('jjds')
+
 })
 
 
