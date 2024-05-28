@@ -21,27 +21,27 @@ const shopBySpot = [{
   },
   {
     title: "Soccer",
-    img: "../../Images/shop4.png"
+    img: "../../Images/shop2.png"
   },
   {
     title: "Golf",
-    img: "../../Images/shop5.png"
+    img: "../../Images/shop3.png"
   },
   {
     title: "Tennis",
-    img: "../../Images/shop6.png"
+    img: "../../Images/shop4.png"
   },
   {
     title: "Football",
-    img: "../../Images/shop7.png"
+    img: "../../Images/shop5.png"
   },
   {
     title: "Basketball",
-    img: "../../Images/shop8.png"
+    img: "../../Images/shop6.png"
   },
   {
     title: "Yoga",
-    img: "../../Images/shop9.png"
+    img: "../../Images/shop7.png"
   },
 ]
 
