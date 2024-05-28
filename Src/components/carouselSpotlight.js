@@ -29,5 +29,5 @@ const classicSpot = [{
     img:"../../Images/men/men-s-shoes-clothing-accessories (4).jpg"
 },]
 
-import { createClassicCarousel } from "../../scripts/components/carouselClassic.js"
+import { createClassicCarousel } from "./carouselClassic.js"
 createClassicCarousel(classicSpot);

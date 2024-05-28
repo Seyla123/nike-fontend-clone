@@ -17,31 +17,31 @@ const trendingCarousel = [{
   ]
 const shopBySpot = [{
     title: "Basketball",
-    img: "../../Images/shop-1.jpeg"
+    img: "../../Images/shop1.png"
   },
   {
     title: "Soccer",
-    img: "../../Images/shop-4.jpeg"
+    img: "../../Images/shop4.png"
   },
   {
     title: "Golf",
-    img: "../../Images/shop-5.jpeg"
+    img: "../../Images/shop5.png"
   },
   {
     title: "Tennis",
-    img: "../../Images/shop-6.jpeg"
+    img: "../../Images/shop6.png"
   },
   {
     title: "Football",
-    img: "../../Images/shop-7.jpeg"
+    img: "../../Images/shop7.png"
   },
   {
     title: "Basketball",
-    img: "../../Images/shop-8.jpeg"
+    img: "../../Images/shop8.png"
   },
   {
     title: "Yoga",
-    img: "../../Images/shop-9.jpeg"
+    img: "../../Images/shop9.png"
   },
 ]
 
