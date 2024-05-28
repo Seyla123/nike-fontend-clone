@@ -135,7 +135,7 @@ const createNavbar = () => {
   <div
     class="flex justify-between lg:grid grid-cols-3 max-w-[1800px] mx-auto px-2"
   >
-    <a href="./index.html" class="flex items-center min-w-16 max-w-16 justify-center">
+    <a href="../../pages/home/index.html" class="flex items-center min-w-16 max-w-16 justify-center">
       <img
         class="w-full h-auto"
         src="https://i.pinimg.com/originals/20/60/2d/20602d43cc993811e5a6bd1886af4f33.png"
@@ -145,7 +145,7 @@ const createNavbar = () => {
 
     <div class="hidden lg:flex items-center justify-center">
       <ul class="flex flex-wrap">
-        <a id="" class="new-featured-menu px-2 py-4 hover:opacity-50" href="./shop.html"
+        <a id="" class="new-featured-menu px-2 py-4 hover:opacity-50" href="../../pages/product/index.html"
           ><li class="new-featured-menu">New & Featured</li></a
         >
         <a
@@ -160,7 +160,7 @@ const createNavbar = () => {
           href="../../pages/women/index.html"
           ><li class="">Women</li></a
         >
-        <a id="kid-menu-btn" class="new-featured-menu px-2 py-4 hover:opacity-50" href="./kid.html"
+        <a id="kid-menu-btn" class="new-featured-menu px-2 py-4 hover:opacity-50" href="../../pages/kid/index.html"
           ><li class="">Kids</li></a
         >
         <button
