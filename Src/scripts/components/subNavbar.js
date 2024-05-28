@@ -4,7 +4,7 @@ const createSubNavbar = (arr)=>{
     <div class="w-full max-w-[1800px] mx-auto pr-4 pl-4">
         <div id="menu" class="w-full flex justify-between py-4 duration-300  sticky top-0 z-30  bg-white flex-col md:flex-row">
         ${arr.map((item)=>{
-            return `<h3 class="flex-1 flex items-center">${item.title}</h3>
+            return `<h3 class="flex-1 flex items-center text-2xl duration-300">${item.title}</h3>
             <div class="flex items-center  flex-2 flex-nowrap text-nowrap overflow-hidden">
                 <ul class="flex">
                 ${item.menu.map((subItem)=>{
