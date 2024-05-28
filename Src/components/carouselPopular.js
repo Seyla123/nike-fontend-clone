@@ -32,12 +32,12 @@ const popularRightNow = [{
 
 
 // Create carousel for popular items right now (shoes)
-const createCarouselPopular = (arr)=>{
+const createCarouselPopular = (arr,title)=>{
     return ` 
     <div class="">
     <div class="flex justify-between mb-4 p-4">
       <h2 class="text-3xl font-medium flex items-center">
-        Popular Right Now
+        ${title ? title : "Popular Right Now"}
       </h2>
       <div class="hidden lg:flex gap-2 items-center">
         <a id="back-btn"
@@ -93,7 +93,8 @@ class PopularCarousel extends HTMLElement{
         super()
     }
     connectedCallback(){
-        this.innerHTML = createCarouselPopular(popularRightNow);
+      const title = this.getAttribute('title');
+        this.innerHTML = createCarouselPopular(popularRightNow, title);
         this.setupEventListeners();
     }
      // Add event listeners for back and next buttons

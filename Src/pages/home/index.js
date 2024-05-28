@@ -90,9 +90,9 @@ const shoeArr = [{
 },
 ]
 
-import {createCarouselArr} from  '../../scripts/components/carousel.js'
-import { createFeatureComponent } from '../../scripts/components/featureComponent.js'
-import { createClassicCarousel } from '../../scripts/components/carouselClassic.js'
+import {createCarouselArr} from  '../../components/carousel.js'
+import { createFeatureComponent } from '../../components/featureComponent.js'
+import { createClassicCarousel } from '../../components/carouselClassic.js'
 // Call the  function with the title ,array , component name ,type
 // Create carousel for trending items
 createCarouselArr('Trending', trendingCarousel,"trending-carousel");

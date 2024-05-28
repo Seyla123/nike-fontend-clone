@@ -31,10 +31,10 @@ const menuSubNavbar = [{
     menu:["Shoes","Clothing", "Accessories","Sale"]
 }]
 
-import { createCarouselArr } from "../../scripts/components/carousel.js"
-import '../../scripts/components/carouselSpotlight.js'
-import { createFeatureComponent } from "../../scripts/components/featureComponent.js"
-import { createSubNavbarFunction } from "../../scripts/components/subNavbar.js"
+import { createCarouselArr } from "../../components/carousel.js"
+import '../../components/carouselSpotlight.js'
+import { createFeatureComponent } from "../../components/featureComponent.js"
+import { createSubNavbarFunction } from "../../components/subNavbar.js"
 
 createCarouselArr("Shop The Essentails",shopTheEssentails,"shop-the-essentails-component");
 createFeatureComponent("Brooks Koepka's Favs", brooks,"brooks-component");

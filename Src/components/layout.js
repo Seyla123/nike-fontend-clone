@@ -3,6 +3,6 @@ import './navbar.js';
 import './footer.js';
 import './promotionBar.js';
 import './subNavbar.js'
-import '../../scripts/components/carouselPopular.js';
-import '../../scripts/components/carouselMemberShip.js';
+import './carouselPopular.js';
+import './carouselMemberShip.js';
 

@@ -15,10 +15,10 @@ const trendingConent = [{
     button:"Shop"
 },
 ]
-import '../../scripts/components/carouselSpotlight.js';
-import '../../scripts/components/moreExplore.js';
-import { createSubNavbarFunction } from "../../scripts/components/subNavbar.js"
-import { createFeatureComponent } from "../../scripts/components/featureComponent.js"
+import '../../components/carouselSpotlight.js';
+import '../../components/moreExplore.js';
+import { createSubNavbarFunction } from "../../components/subNavbar.js"
+import { createFeatureComponent } from "../../components/featureComponent.js"
 
 createFeatureComponent("Trending", trendingConent,"kid-trending-component");
 createSubNavbarFunction(menuSubNavbar)
