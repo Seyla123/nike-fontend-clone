@@ -20,7 +20,7 @@ const createHeader = ()=>{
           |
           <a class="p-3" href=""><li >Join us</li></a>
           |
-          <a class="p-3" href="../pages/sign-in.html"><li >Sign in</li></a>
+          <a class="p-3" href="../../pages/sign-in/index.html"><li >Sign in</li></a>
         </ul>
         <div id="helpDropdown" class="bg-white rounded-lg w-[220px] pointer-events-none opacity-0 top-1 right-[43%]  duration-300  absolute z-50 ">
           <div class=" p-4 space-y-4">
