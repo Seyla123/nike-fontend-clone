@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nike. Just Do It. Nike.com</title>
+  <!-- nike icon -->
+  <link href="https://www.nike.com/favicon.ico?v=1" rel="icon" type="image/x-icon">
+  <!-- CSS -->
+  <link href="../../styles/style.css" rel="stylesheet">
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/cc39ea921b.js" crossorigin="anonymous"></script>
+  <!-- tailwind script -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- google font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+  <!--  -->
+</head>
+<body class="">
+
+  <div id="all-except-sidebar" class="duration-1000">
+    <header-component></header-component>
+    <navbar-component></navbar-component>
+    <!-- hero section -->
+    <div class="w-full >
+      <a href="" class="w-full" >
+          <div class="flex flex-col justify-center items-center w-full">
+              <div class="h-full w-full">
+                  <img class="h-full w-full hidden sm:flex" src="../../Images/hero-section.jpeg" alt="" />
+                  <img class="sm:hidden flex " src="../../Images/min-nike.jpeg" alt="" />
+                </div>
+                <div class="text-center p-10">
+                   
+                      <p>Brooks's Looks</p>
+                      <h3 class="text-6xl lilita-one-regular">GEARS-UP FOR <br/>THE MAJORS</h3>
+                      <p class="pt-6">
+                        How the golf sensation is gearing up for this season’s Majors and beyond.
+                      </p>
+                      <a href="../shop.html">
+                      <button class="mt-6 bg-black text-white p-2 pr-4 pl-4 rounded-full" >Shop the Collection</button>
+                      </a>
+                  </div>
+          </div> 
+      </a>
+    </div>
+    <!-- content have max width -->
+    <section id="section" class="max-w-[1800px] mx-auto " >
+      <trending-carousel></trending-carousel>
+      <feature-content-component></feature-content-component>
+      <classic-carousel></classic-carousel>
+      <spot-carousel></spot-carousel>
+      <popular-carousel-component></popular-carousel-component>
+      <member-ship-carousel></member-ship-carousel>
+    </section>
+    <!-- footer -->
+    <footer-component></footer-component>
+  </div>
+  <side-bar-component></side-bar-component>
+</body>
+<!-- script link -->
+<script type="module" src="./index.js"></script>
+<!-- global component link -->
+<script type="module" src="../../components/layout.js"></script>
+</html>

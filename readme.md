@@ -1,3 +1,68 @@
+# Nike Clone
+
+This project is a clone of several pages of the Nike website, built as part of a school project. The goal is to replicate the design and some functionalities using HTML, CSS, JavaScript, and Tailwind CSS.
+
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [Contact](#contact)
+
+## Project Overview
+
+This project includes the following pages cloned from the Nike website:
+
+1. Home Page
+2. Men Page
+3. Women Page
+4. Kids Page
+5. Product Page
+6. Product Detail Page
+7. Sign Up Page
+8. Sign In Page
+
+Each page is designed to closely mimic the layout and design of the original Nike website, using only front-end technologies.
+
+## Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://git.clp.kr/anbschool/2nd/hexcode/seav-seyla/nike-clone.git
+    ```
+
+2. Navigate to the project directory:
+    ```bash
+    cd nike-clone
+    ```
+
+3. Open the `src/page/home/index.html` file in your browser to view the project.
+
+## Usage
+
+After opening `index.html` in your browser, you can navigate through the various sections of the website. Use the navigation menu to access different pages such as the Men, Women, Kids, Product, Product Detail, Sign Up, and Sign In pages.
+
+## Features
+
+- Responsive design using Tailwind CSS
+- Replicated layout and styling of the original Nike website
+- Basic navigation between pages
+- Static content to demonstrate the look and feel
+
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+- Tailwind CSS
+
+## Contributing
+
+Contributions are welcome! If you would like to contribute, please follow these steps:
+
 ![image](https://github.com/Seyla123/Clone-Nike-Ind/assets/89925541/6be663ee-6f13-4466-92af-33aa549eb189)
 
 1. **Understanding Git-Flow**
@@ -224,3 +289,11 @@
 
 
     The Git-Flow branching strategy employed in this project offers a clear and organized approach to managing feature development, releases, and bug fixes. By utilizing branches such as main, develop, feature, release, bugfix, and hotfix, the project maintains a well-defined structure, enabling seamless integration of changes and ensuring the stability and reliability of the codebase.	
+
+
+## Contact
+
+For any questions, feel free to reach out:
+
+- **Seav Seyla** - [mrrseyla.758@gmail.com](mailto:mrrseyla.758@gmail.com)
+- GitLab: [@Seyla123](https://git.clp.kr/Seyla123)

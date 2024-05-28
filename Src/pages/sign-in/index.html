@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Nike - Sign In</title>
+    <!-- nike icon -->
+    <link href="https://www.nike.com/favicon.ico?v=1" rel="icon" type="image/x-icon">
+    <!-- CSS -->
+    <link href="../../styles/style.css" rel="stylesheet">
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/cc39ea921b.js" crossorigin="anonymous"></script>
+    <!-- tailwind script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+    <!--  -->
+</head>
+
+<body>
+    <div class=" flex justify-center">
+        <div class="w-[460px] min-w-56 p-4">
+            <div class=" flex items-center gap-2  w-full ">
+                <div class="w-12 py-8">
+                    <img src="https://i.pinimg.com/originals/20/60/2d/20602d43cc993811e5a6bd1886af4f33.png" alt="">
+                </div>
+                <div class="w-10 py-8">
+                    <img src="../../Images/jordan.png" alt="">
+                </div>
+            </div>
+            <div class="w-full ">
+                <h3 class="text-[28px]">Enter your email to join us or sign in.</h3>
+            </div>
+            <div class="w-full">
+                <form action="../../pages/sign-up/index.html" id="formEmail" name="emailForm"  class="w-full ">
+
+                    <div class="flex flex-col gap-6">
+                        <div class=" flex gap-2 items-center">
+                            <span id="selected-country-label">Cambodia</span>
+                            <div class="relative">
+                                <label id="selectorBtn" for="country"  class="underline text-gray-600 relative z-40 pointer-events-none" for="">Change</label>
+                                <select id="country" name="country" value="KH"  class="absolute left-0 z-0 opacity-0 w-10">
+
+                                </select>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="h-14 relative">
+                                <input id="inputEmail" type="text" name="email" class="px-4  outline outline-1 w-full h-full rounded-lg" required>
+                                <!-- left-[2%] text-[12px] px-[5px] top-[-16%] bg-white -->
+                                <label id="labelEmail" class="absolute left-[3%] top-[30%] px-[5px] bg-white  duration-300" for="">Email*</label>
+                            </div>
+                            <label id="labelrequired" class="text-red-600 font-medium px-4 text-[12px] hidden">Required</label>
+
+                           
+                        </div>
+                        <div class="w-full">
+                       
+                                <div class="max-w-[340px] text-gray-400">
+                                    By continuing, I agree to Nike’s <a class="underline" href="#">Privacy Policy</a>
+                                    and <a class="underline" href="#">Terms of Use.</a>
+                                </div>
+                
+                        </div>
+                        
+                        <div class="flex justify-end">
+                            
+                            <button id="btnSumbit" type="submit" class="mt-6 bg-black text-white p-3 font-medium pr-6 pl-6 rounded-full ">Continue</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="./index.js"></script>
+
+</html>
