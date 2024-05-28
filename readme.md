@@ -59,6 +59,9 @@ After opening `index.html` in your browser, you can navigate through the various
 - JavaScript
 - Tailwind CSS
 
+
+ **Convention Guide** - [Link Here](https://outgoing-oval-b13.notion.site/Seav-Seyla-Nike-Clone-60a66b3d63fe413ebe8cbfaefba3efc7)
+
 ## Contributing
 
 Contributions are welcome! If you would like to contribute, please follow these steps:
