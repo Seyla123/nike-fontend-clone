@@ -26,7 +26,6 @@ inputEmail.addEventListener("focus", () => {
 
 addEventListener("focusout", (event) => {
     
-  console.log(inputEmail.value.length);
   if (inputEmail.value.length == 0) {
     showRequired();
     unfocued();
@@ -38,8 +37,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   inputField.addEventListener("input", function () {
     var inputValue = inputEmail.value;
-    //console.log("Input field value changed:", inputValue);
-    console.log(inputValue.length)
     if (inputValue.length == 0) {
       labelrequired.innerHTML = "Required";
     } else {

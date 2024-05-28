@@ -33,11 +33,11 @@ const trendingContent = [{
     description: "New Fitness Essentials",
 
 },]
-import '../../scripts/components/carouselSpotlight.js'
+import '../../components/carouselSpotlight.js'
 
-import { createFeatureComponent } from "../../scripts/components/featureComponent.js"
-import { createCarouselArr } from "../../scripts/components/carousel.js"
-import { createSubNavbarFunction } from "../../scripts/components/subNavbar.js"
+import { createFeatureComponent } from "../../components/featureComponent.js"
+import { createCarouselArr } from "../../components/carousel.js"
+import { createSubNavbarFunction } from "../../components/subNavbar.js"
 createFeatureComponent("Trending", trendingContent,"trending-women-component");
 createCarouselArr("Shop The Essentails",shopTheEssentails,"shop-the-essentails-component");
 createSubNavbarFunction(womenSubNavbar)

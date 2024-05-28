@@ -2,42 +2,42 @@ const popularRightNow = [{
     title: "Nike Zoom Vomero 5",
     type: "Women's Shoe",
     price : "$160",
-    img : "../../Images/pop-2.png",
+    img : "../../Images/men/zoom-vomero-5-mens-shoes-MgsTqZ.png",
 },
 {
     title: "Nike Vomero 1",
     type: "men's Shoe",
     price : "$120",
-    img : "../../Images/pop-3.png",
+    img : "../../Images/men/air-jordan-1-low-se-mens-shoes-r4hJb1.png",
 },
 {
     title: "Nike Zoom Vomero 1",
     type: "Women's Shoe",
     price : "$130",
-    img : "../../Images/pop-5.png",
+    img : "../../Images/men/gt-cut-3-basketball-shoes-GLHCGc.png",
 },
 {
     title: "Nike Zoom ",
     type: "men's Shoe",
     price : "$150",
-    img : "../../Images/pop-4.png",
+    img : "../../Images/men/ja-1-vacation-basketball-shoes-bCx2W3.png",
 },
 {
     title: "Nike Zoom Vomero 1",
     type: "Women's Shoe",
     price : "$130",
-    img : "../../Images/pop-7.png",
+    img : "../../Images/men/air-jordan-3-retro-green-glow-mens-shoes-Xv0sqM.png",
 },
 ]
 
 
 // Create carousel for popular items right now (shoes)
-const createCarouselPopular = (arr)=>{
+const createCarouselPopular = (arr,title)=>{
     return ` 
     <div class="">
     <div class="flex justify-between mb-4 p-4">
       <h2 class="text-3xl font-medium flex items-center">
-        Popular Right Now
+        ${title ? title : "Popular Right Now"}
       </h2>
       <div class="hidden lg:flex gap-2 items-center">
         <a id="back-btn"
@@ -93,7 +93,8 @@ class PopularCarousel extends HTMLElement{
         super()
     }
     connectedCallback(){
-        this.innerHTML = createCarouselPopular(popularRightNow);
+      const title = this.getAttribute('title');
+        this.innerHTML = createCarouselPopular(popularRightNow, title);
         this.setupEventListeners();
     }
      // Add event listeners for back and next buttons
