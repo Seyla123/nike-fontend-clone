@@ -25,7 +25,7 @@ This project includes the following pages cloned from the Nike website:
 7. Sign Up Page
 8. Sign In Page
 
- **Link Deploy ** - [Nike-clone](https://outgoing-oval-b13.notion.site/Seav-Seyla-Nike-Clone-60a66b3d63fe413ebe8cbfaefba3efc7)
+ **Link Deploy ** - [Nike-clone](https://seav-seyla-nike-web-clone.vercel.app/)
 
 Each page is designed to closely mimic the layout and design of the original Nike website, using only front-end technologies.
 
