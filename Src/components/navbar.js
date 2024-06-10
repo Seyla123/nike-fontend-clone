@@ -474,49 +474,49 @@ class Navbar extends HTMLElement{
         this.addEventListener();
     }
     addEventListener(){
-      // Setup for the new featured menu dropdown
+      // Setup for the new featured menu dropdown dropdown1 belowDropdown1
       var btn2 = document.querySelector(".new-featured-menu");
-      var dropdowm_1 = document.getElementById("dropdown-1");
-      let below_dropdown_1 = document.getElementById("below-dropdown-1");
+      var dropdown1 = document.getElementById("dropdown-1");
+      let belowDropdown1 = document.getElementById("below-dropdown-1");
       const navbarTop = document.querySelector("#navbar")
       const blurBg = document.querySelector("#blurBg");
       
       // Event listeners for mouseover on the new featured menu button
       btn2.addEventListener("mouseover", function () {
-        below_dropdown_1.classList.remove("pointer-events-none");
-        dropdowm_1.classList.add("h-[400px]");
-        below_dropdown_1.classList.add("delay-300");
-        below_dropdown_1.classList.add("opacity-100");
+        belowDropdown1.classList.remove("pointer-events-none");
+        dropdown1.classList.add("h-[400px]");
+        belowDropdown1.classList.add("delay-300");
+        belowDropdown1.classList.add("opacity-100");
         navbarTop.classList.add("sticky")
         blurBg.classList.add("backdrop-blur-sm", "bg-white/10")
       });
 
       // Event listeners for mouseover on the dropdown itself
-      dropdowm_1.addEventListener("mouseover", function () {
-        below_dropdown_1.classList.remove("pointer-events-none");
-        below_dropdown_1.classList.remove("delay-300");
-        dropdowm_1.classList.add("h-[400px]");
-        below_dropdown_1.classList.add("opacity-100");
+      dropdown1.addEventListener("mouseover", function () {
+        belowDropdown1.classList.remove("pointer-events-none");
+        belowDropdown1.classList.remove("delay-300");
+        dropdown1.classList.add("h-[400px]");
+        belowDropdown1.classList.add("opacity-100");
         navbarTop.classList.add("sticky");
         blurBg.classList.add("backdrop-blur-sm", "bg-white/10")
       });
 
       // Event listeners for mouseout on the new featured menu button
       btn2.addEventListener("mouseout", function () {
-        dropdowm_1.classList.remove("h-[400px]");
-        below_dropdown_1.classList.remove("delay-300");
-        below_dropdown_1.classList.remove("opacity-100");
-        below_dropdown_1.classList.add("pointer-events-none");
+        dropdown1.classList.remove("h-[400px]");
+        belowDropdown1.classList.remove("delay-300");
+        belowDropdown1.classList.remove("opacity-100");
+        belowDropdown1.classList.add("pointer-events-none");
         navbarTop.classList.remove("sticky")
         blurBg.classList.remove("backdrop-blur-sm", "bg-white/10")
       });
 
       // Event listeners for mouseout on the dropdown itself
-      dropdowm_1.addEventListener("mouseout", function () {
-        dropdowm_1.classList.remove("h-[400px]");
-        below_dropdown_1.classList.remove("delay-300");
-        below_dropdown_1.classList.remove("opacity-100");
-        below_dropdown_1.classList.add("pointer-events-none");
+      dropdown1.addEventListener("mouseout", function () {
+        dropdown1.classList.remove("h-[400px]");
+        belowDropdown1.classList.remove("delay-300");
+        belowDropdown1.classList.remove("opacity-100");
+        belowDropdown1.classList.add("pointer-events-none");
         navbarTop.classList.remove("sticky")
         blurBg.classList.remove("backdrop-blur-sm", "bg-white/10")
       });
