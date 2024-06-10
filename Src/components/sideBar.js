@@ -30,9 +30,6 @@ const sideBar = () => {
         </div>
       </div>
     </a>
-
-    
-
     <div class="pt-4 pb-4 flex justify-between">
       <p>Accessories</p>
       <div class="flex items-center">

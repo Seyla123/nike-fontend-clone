@@ -28,7 +28,6 @@ export function createSubNavbarFunction(arr){
     class SubNavbar extends HTMLElement{
         constructor(){
             super()
-    
         }
         connectedCallback(){
             this.innerHTML = createSubNavbar(arr);
