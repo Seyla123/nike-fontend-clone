@@ -1,3 +1,18 @@
+const helpOptions = [
+  { text: "Order Status", href: "#" },
+  { text: "Shipping and Delivery", href: "#" },
+  { text: "Return", href: "#" },
+  { text: "Order Cancellation", href: "#" },
+  { text: "Size Charts", href: "#" },
+  { text: "Contact Us", href: "#" },
+  { text: "Membership", href: "#" },
+  { text: "Promotion and Discounts", href: "#" },
+  { text: "Product Advice", href: "#" },
+  { text: "Send Us Feedback", href: "#" }
+];
+const helpItemsHtml = helpOptions.map(option => 
+  `<li><a class="hover:text-black" href="${option.href}">${option.text}</a></li>`
+).join('');
 const createHeader = ()=>{
     return `
     <div class="hidden lg:block relative z-100 w-full bg-[#f5f5f5] ">
@@ -28,36 +43,7 @@ const createHeader = ()=>{
               <h3 >HELP</h3>
             </div>
             <ul class="text-xs text-gray-700 space-y-3">
-              <li>
-                <a class="hover:text-black" href="#">Order Status</a>
-              </li>
-              <li>
-                <a class="hover:text-black" href="#">Shipping and Delivery</a>
-              </li>
-              <li>
-                <a class="hover:text-black" href="#">Return</a>
-              </li>
-              <li>
-                <a class="hover:text-black" href="#">Order Cancellation</a>
-              </li>
-              <li>
-                <a class="hover:text-black" href="#">Size Charts</a>
-              </li>
-              <li>
-                <a class="hover:text-black" href="#">Contact Us</a>
-              </li>
-              <li>
-                <a class="hover:text-black" href="#">Membership</a>
-              </li>
-              <li>
-                <a class="hover:text-black" href="#">Promotion and Discounts</a>
-              </li>
-              <li>
-                <a class="hover:text-black" href="#">Product Advice</a>
-              </li>
-              <li>
-                <a class="hover:text-black" href="#">Send Us Feedback</a>
-              </li>
+            ${helpItemsHtml}
             </ul>
           </div>
         </div>

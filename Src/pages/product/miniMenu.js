@@ -1,36 +1,26 @@
+const miniMenuItems = [
+    { name: 'Shoes', href: '#' },
+    { name: 'Tops & T-Shirts', href: '#' },
+    { name: 'Shorts', href: '#' },
+    { name: 'Hoodies & Pullovers', href: '#' },
+    { name: 'Jackets & Vests', href: '#' },
+    { name: 'Pants & Tights', href: '#' },
+    { name: 'Swimming', href: '#' },
+    { name: 'Socks', href: '#' },
+    { name: 'Accessories & Equipment', href: '#' },
+];
 const createMiniMenu = () => {
     return `
     <div class="lg:hidden  divide-y">
     <div class=" w-full py-6 flex items-center ">
         <ul class="flex flex-nowrap text-nowrap overflow-hidden">
+        ${miniMenuItems.map((item)=>{
+            return `
             <li>
-                <a class="w-4 pr-4 font-semibold" href="#">Shoes</a>
-            </li>
-            <li>
-                <a class="w-4 pr-4 font-semibold" href="#">Tops & T-Shirts</a>
-            </li>
-            <li>
-                <a class="w-4 pr-4 font-semibold" href="#">Shorts</a>
-            </li>
-            <li>
-                <a class="w-4 pr-4 font-semibold" href="#">Hoodies & Pullovers</a>
-            </li>
-            <li>
-                <a class="w-4 pr-4 font-semibold" href="#">Jackets & Vests</a>
-            </li>
-            <li>
-                <a class="w-4 pr-4 font-semibold" href="#">Pants & Tights</a>
-            </li>
-            <li>
-                <a class="w-4 pr-4 font-semibold" href="#">Swimming</a>
-            </li>
-            <li>
-                <a class="w-4 pr-4 font-semibold" href="#">Socks</a>
-            </li>
-            <li>
-                <a class="w-4 pr-4 font-semibold" href="#">Accessories & Equipment</a>
-            </li>
-
+                <a class="w-4 pr-4 font-semibold" href="${item.href}">${item.name}</a>
+             </li>
+            `
+        })}
         </ul>
     </div>
     <div class="w-full py-6 pr-4 flex justify-between items-center ">
