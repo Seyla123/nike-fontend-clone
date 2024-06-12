@@ -129,12 +129,58 @@ const saleDropdown = {
   Women: ["Shoes", "Clothing", "Accessories", "Shop All"],
   Kids: ["Shoes", "Clothing", "Accessories", "Shop All"],
 };
+const menuItems = [
+  {
+      text: "New & Featured",
+      id: "",
+      href: "../../pages/product/index.html"
+  },
+  {
+      text: "Men",
+      id: "men-menu-btn",
+      href: "../../pages/men/index.html"
+  },
+  {
+      text: "Women",
+      id: "women-menu-btn",
+      href: "../../pages/women/index.html"
+  },
+  {
+      text: "Kids",
+      id: "kid-menu-btn",
+      href: "../../pages/kid/index.html"
+  },
+  {
+      text: "Accessories",
+      id: "acc-menu-btn",
+      href: ""
+  },
+  {
+      text: "Sales",
+      id: "sale-menu-btn",
+      href: ""
+  }
+];
+const renderMenuItems = () => {
+  return `
+    <div class="hidden lg:flex items-center justify-center">
+      <ul class="flex flex-wrap">
+      ${menuItems.map((item)=>{
+        return `
+        <a id="${item.id}" class="new-featured-menu px-2 py-4 hover:opacity-50" href="${item.href}">
+          <li class="new-featured-menu">${item.text}</li>
+        </a>
+        `
+      }).join("")}
+      </ul>
+    </div>
+  `;
+}
+
 const createNavbar = () => {
     return `
     <div class="w-full top-0 bg-white z-[51] " id="navbar">
-  <div
-    class="flex justify-between lg:grid grid-cols-3 max-w-[1800px] mx-auto px-2"
-  >
+  <div class="flex justify-between lg:grid grid-cols-3 max-w-[1800px] mx-auto px-2">
     <a href="../../pages/home/index.html" class="flex items-center min-w-16 max-w-16 justify-center">
       <img
         class="w-full h-auto"
@@ -142,40 +188,8 @@ const createNavbar = () => {
         alt=""
       />
     </a>
-
     <div class="hidden lg:flex items-center justify-center">
-      <ul class="flex flex-wrap">
-        <a id="" class="new-featured-menu px-2 py-4 hover:opacity-50" href="../../pages/product/index.html"
-          ><li class="new-featured-menu">New & Featured</li></a
-        >
-        <a
-          id="men-menu-btn"
-          class="new-featured-menu px-2 py-4 hover:opacity-50"
-          href="../../pages/men/index.html"
-          ><li class="">Men</li></a
-        >
-        <a
-          id="women-menu-btn"
-          class="new-featured-menu px-2 py-4 hover:opacity-50"
-          href="../../pages/women/index.html"
-          ><li class="">Women</li></a
-        >
-        <a id="kid-menu-btn" class="new-featured-menu px-2 py-4 hover:opacity-50" href="../../pages/kid/index.html"
-          ><li class="">Kids</li></a
-        >
-        <button
-          id="acc-menu-btn"
-          class="new-featured-menu px-2 py-4 hover:opacity-50 accessories"
-          
-          ><li class="">Accessories</li></button
-        >
-        <button
-          id="sale-menu-btn"
-          class=" new-featured-menu px-2 py-4 hover:opacity-50"
-          href=""
-          ><li class="">Sales</li></button
-        >
-      </ul>
+      ${renderMenuItems()}
     </div>
     <!-- for phone screen -->
     <div class="flex flex-row lg:hidden ">
@@ -236,14 +250,8 @@ const createNavbar = () => {
     </div>
   </div>
   
-  <div
-  id="dropdown-1"
-  class="hidden  md:flex absolute z-50 duration-300 h-0 w-full flex-col bg-white text-gray-800 group-hover:visible"
->
-  <div
-    id="below-dropdown-1"
-    class="opacity-0 pointer-events-none p-6 w-full flex gap-20 justify-center"
-  >
+  <div id="dropdown-1" class="hidden  md:flex absolute z-50 duration-300 h-0 w-full flex-col bg-white text-gray-800 group-hover:visible">
+  <div id="below-dropdown-1" class="opacity-0 pointer-events-none p-6 w-full flex gap-20 justify-center">
     <div>
       <h3 class="font-semibold">New Styles Added</h3>
       <ul class="pt-4 text-gray-600">
@@ -258,12 +266,8 @@ const createNavbar = () => {
         <li class="pt-2 cursor-pointer hover:text-black">New Arrivals</li>
         <li class="pt-2 cursor-pointer hover:text-black">Best Sellers</li>
         <li class="pt-2 cursor-pointer hover:text-black">Member Product</li>
-        <li class="pt-2 cursor-pointer hover:text-black">
-          New & Upcomming Drops
-        </li>
-        <li class="pt-2 cursor-pointer hover:text-black">
-          SNKRS Lanuch Calendar
-        </li>
+        <li class="pt-2 cursor-pointer hover:text-black">New & Upcomming Drops</li>
+        <li class="pt-2 cursor-pointer hover:text-black"> SNKRS Lanuch Calendar</li>
         <li class="pt-2 cursor-pointer hover:text-black">New in ACG</li>
         <li class="pt-2 cursor-pointer hover:text-black">Retro Running</li>
         <li class="pt-2 cursor-pointer hover:text-black">See Price in Bag</li>
