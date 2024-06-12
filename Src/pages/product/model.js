@@ -97,7 +97,6 @@ inputLocation.addEventListener("focus", function(){
   spanLocation.classList.add("text-xs","bg-white","text-black","left-3","top-[-10px]")
 })
 inputLocation.addEventListener("focusout", (event) => {
-  console.log(inputLocation.value.length);
   if (inputLocation.value.length == 0) {
     spanLocation.innerHTML="Show Location"
     spanLocation.classList.remove("text-xs","bg-white","text-black","left-3","top-[-10px]")

@@ -22,12 +22,10 @@ function focused(elementId){
   
   function required(input,label,required){
     input.addEventListener("focus", () => {
-      console.log("focuced");
       focused(label);
     });
     input.addEventListener("focusout", (event) => {
       unfocued(label);
-      console.log(input.value.length);
       if (input.value.length == 0) {
         showRequired(input,label,required);
         unfocued(input,label,required);
